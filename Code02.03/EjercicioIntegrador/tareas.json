@@ -1,0 +1,23 @@
+
+[
+    {
+        "titulo": "Inventario",
+        "estado":"En proceso"
+        
+    },
+    {
+        "titulo": "Archivar expedientes",
+        "estado":"Pendiente"
+        
+    },
+    {
+        "titulo": "Control Stock",
+        "estado":"Finalizado"
+        
+    },
+    {
+        "titulo": "Pedidos Proveedores",
+        "estado":"Pendiente"
+    
+    }
+]
