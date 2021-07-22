@@ -1,1 +1,1 @@
-// Este es un archivo de pruba para verificar como funciona Github
+// Este es un archivo de prueba para verificar como funciona Github
