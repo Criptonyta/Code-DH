@@ -1,13 +1,12 @@
 // SendFile('Path')
 // Sirve para enviar un archivo (res) y no un texto plano, frente a un request
-// El path debe ser declarado en terminos absolutos, por ello requiere que se instale el modulo path de express
+// La ruta (El path), debe ser declarado en terminos absolutos, por ello requiere que se instale el modulo path de express
 
 // *Ejecutando nodemon en el terminal, el servidor se actualiza automaticamente al salvar*
 // Se instala con el comando npm install -g nodemon
 
 
 const express = require ('express');
-const { dirname } = require('path');
 const path = require ('path'); // instalo el modulo path
 let app = express();
 app.listen (3000, () => console.log ('Servidor corriendo en puerto 3000'));
