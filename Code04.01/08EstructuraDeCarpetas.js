@@ -16,4 +16,10 @@ app.get('/', (req, res) => {
     let htmlPath = path.resolve(__dirname, './vistas/index.html') // Uso la ruta absoluta con el modulo path y el metodo resolve guardandolo en una variable
     console.log(htmlPath); // imprimo la ruta absoluta completa
     res.sendFile(htmlPath); // Envio el archivo html
-    })
+    });
+
+
+// Otra forma mas simple de hacer lo anterior con el metodo join
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname,'./vistas/index.html'));
+})
