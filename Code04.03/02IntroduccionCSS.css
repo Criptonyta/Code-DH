@@ -1,0 +1,19 @@
+/* 
+
+Para linkar la CSS y el HTML hay que usar en el HEAD del HTML, la etiqueta <link> y el atributo rel="stylesheet". Ej. <link rel="stylesheet" href="/ruta-al-archivo/style.css">
+
+Sintaxis
+Selector {propiedad: valor;}
+a) Selector => define a que elemento le aplicara la regla 
+b) Propiedad => es la caracteristica visual que queremos manipular . Ej: tamano de la tipografia
+c) Valor => es en cuanto queremos modificarlo . Ej : 15 px 
+Declaracion => Cuando juntamos la propiedad y el valor
+
+Tipos de selectores
+a) Selectores de etiqueta => p {font-size:15px;} // Pondra todos los parrafos en tamaño 15 px
+b) Selectores de clase => .nombre-en-minuscula {color:red;} // Antes hay que definir en el HTML la clase. Ej (en el HTML). <p class="nombre-en-minuscula">Soy un texto de color rojo</p>
+c) Selectores descendentes =>.noticia h2 {font-size:35px;} // Es una mezcla de los dos anteriores. Le dara formato solo a los h2 definidos con la class=noticia, no a los otros h2 que existan en el documento
+
+
+
+*/
