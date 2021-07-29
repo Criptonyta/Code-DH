@@ -1,0 +1,20 @@
+/*
+Fondos de color o imagen
+
+body {
+
+background-color: #800080; / Para definir un color de fondo /
+
+background-image: url(../images/star.jpg); / Recibe una ruta relativa o absoluta que represente la ubicacion de la imagen. La imagen siempre va a quedar por encima del color de fondo /
+
+background-repeat: repeat; / Otros valores son: no-repeat, repeat-x, repeat-y /
+
+background-position: center-bottom; / Sirve para controlar la posicion de la imagen de fondo (siempre que no este en repeat). Otros valores son aplicables para el eje x y el y combinandolas. Por ejemplo: center top, right bottom, left top, etc)
+
+background-attachment: scroll;  / Sirve para controlar el comportamiento de la imagen de fondo, cuando se scrolea. Sus valores son scroll o fixed /
+
+background-size:   / Permite controlar el tamano de la imagen de fondo. Permite valores contain (ocupa todo el ancho o todo el alto, lo que ocurra primero) y cover.
+
+}
+
+*/
