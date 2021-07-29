@@ -1,0 +1,25 @@
+/* Propiedades mas usadas para fuentes
+
+h1{
+
+color: red; /Tambien pueden expresarse los valores usando RGB o el numero del color /
+
+font-family: Verdana; /El valor puede ser cualquier font instalada. Puede tener varios valores separados por coma. El sistema intentara usar el primer valor, si no esta instalada, usara el segundo o el tercero/
+
+font-size: 15px; /La unidad de medida mas comun es px (pixels)/
+
+font-style: italic; / Otros valores son: normal /
+
+font-weight: bold; / Otros valores son: normal /
+
+text-align: left; / Otros valores son: right, center, justify /
+
+text-decoration: underline; / Otros valores son: none y line through /
+
+text-transform: none; / Otros valores son: uppercase, lowercase /
+
+line-height: / Es para definir el interlineado del texto. Valor definido en px. Debe ir acompanado de la propiedad font-size y agregarle +8 al valor de esta ultima. /
+
+};
+
+*/

@@ -1,0 +1,18 @@
+/* Colores para fuentes 
+
+Atributos >
+
+color: Para definir el color de un texto
+background-color: Define el color de un fondo
+
+Valores > 
+
+Por nombre => Basta con mencionar el nombre (hasta 140) del color en ingles.
+Hexadecimal => Permite una gran paleta de colores. Sintaxis => #nnnnnn
+RGB => Necesita usar la funcion RGB(255,255,255)
+RGBA => El A final, hace referencia a la opacidad. Los primeros 3 corresponden al color y el ultimo a la opacidad en una escala de 0 a 1.
+
+Usar colorpicker en google para establecer el codigo que estamos buscando
+
+*/
+
