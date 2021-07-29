@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primer documento HTML</title> <!-- Es lo que se ve en la pestana -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Implementando Google fonts (https://fonts.google.com/) -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- GoogleFonts => Copio y pego en el head los links que me da la GFonts, luego de haberlos elegido -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet"> <!-- GoogleFonts => Este link me permite trabajar con las fuentes que he elegido -->
+
+    <link rel="stylesheet" href="/css/normalize.css"> <!-- Implementando Libreria Normalize.css (https://necolas.github.io/normalize.css/) para que el sitio web sea homogeneo en los diferentes navegadores. Desde el sitio, descargo, guardo como la css en la misma carpeta del proyecto y luego la linkeo -->
+    
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Adicionado el vinculo con el CSS (siempre debe ser el ultimo link) -->
+
 </head>
 <body>
     <h4>Soy un h4</h4>
@@ -15,9 +26,11 @@
 
     <img src="/images/leia.jpg" alt="Leia"> <!-- Como estoy usando la variable publicPath, alcanza con que le indique la ruta desde la carpeta public (ya que esta es estatica)-->
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi unde minus perferendis explicabo? Fugiat nemo itaque neque repellendus earum in sed reprehenderit necessitatibus magni, fugit quis odio repudiandae sit modi.</p>
+    <strong>Otro texto en negrita</strong>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non molestias nemo, voluptates, ipsa culpa, cumque et dicta deserunt ratione obcaecati earum accusantium veritatis molestiae maiores quaerat quasi in magni repellat.</p>
+    <p>Lorem ipsum dolor, sit amet <strong>Esto es un texto strong en negrita</strong> adipisicing elit. Sequi unde minus perferendis explicabo? Fugiat nemo itaque neque repellendus earum in sed reprehenderit necessitatibus magni, fugit quis odio repudiandae sit modi.</p>
+
+    <p class="parrafo-destacado">Lorem, ipsum dolor sit amet <em>soy un texto en cursiva </em>consectetur adipisicing elit. Non molestias nemo, voluptates, ipsa culpa, cumque et dicta deserunt ratione obcaecati earum accusantium veritatis molestiae maiores quaerat quasi in magni repellat.</p>
 
     <ol>
         <li>Item 1</li>
