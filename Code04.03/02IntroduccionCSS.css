@@ -13,7 +13,7 @@ Tipos de selectores
 a) Selectores de etiqueta => p {font-size:15px;} // Pondra todos los parrafos en tamaño 15 px
 b) Selectores de clase => .nombre-en-minuscula {color:red;} // Antes hay que definir en el HTML la clase. Ej (en el HTML). <p class="nombre-en-minuscula">Soy un texto de color rojo</p>
 c) Selectores descendentes =>.noticia h2 {font-size:35px;} // Es una mezcla de los dos anteriores. Le dara formato solo a los h2 definidos con la class=noticia, no a los otros h2 que existan en el documento
-
+d) Selectores de ID => #saludo {color: blue;} // Para vincularlos, en el HTML debemos identificar el elemento con <h3 id="saludo">Hola!</h3>
 
 
 */
