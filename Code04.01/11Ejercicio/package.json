@@ -1,7 +1,6 @@
 {
   "name": "11ejercicio",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^2.0.12",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }
