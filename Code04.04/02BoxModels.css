@@ -1,0 +1,43 @@
+/* 
+BoxModel => En HTML, todos los elementos se representan mediante cajas
+Cada caja se compone de: Margenes (margin), Bordes (border), Relleno (padding) y Contenido (content)
+Con CSS, podemos manipular individualmente las propiedades de esos componentes para cada uno de sus lados. 
+
+
+Propiedades: valores posibles; 
+*/
+
+div {
+    /* display permite convertir un elemento de linea en uno e bloque y viceversa */
+    display: block ; /* = permite convertir un elemento de linea en uno de bloque */
+    display: inline ; /* = permite convertir un elemento de bloque a uno de linea. No se recomienda su uso */
+    display: inline-block ; /* = permite convertir un elemento de bloque a uno de linea. Esta es la mas recomendada */
+
+    /* Ancho y alto de la caja (solo para los elementos de bloque) */
+    width: 120px; /* = Ancho. Tambien puede usarse un valor en % */
+    height: 130px; /* = Alto. No es conveniente usar un valor en % */
+
+    /* padding => Relleno que podemos aplicar entre el contenido y el borde del elemento. */
+    padding: 12px; /* = Indicando un unico valor, se aplicara el mismo para todos los lados */
+    padding: 12px 20px; /* = El primer valor refiere al relleno de arriba y abajo y el segundo a ambos lados */
+    padding: 12px 20px 18px; /* = El primer valor es el de arriba, el segundo de los lados y el tercero el de abajo */
+    padding: 12px 20px 18px 21px ; /* = sigue las agujas del reloj. El primer valor es el de arriba, el segundo de la derecha, el tercero el de abajo y el cuarto el de la izquierda. Tambien se puede expresar individualmente como padding-top, padding-right, padding-bottom, padding-left */
+    
+    /* border => Es el borde del elemento, que se encuentra entre el contenido y el margen. se le puede modificar el estilo de linea el grosor y el color todo junto en la misma linea o de forma separada */
+    border: solid 10px yellow;
+    border-width: 10px; /* Ancho de borde */
+    border-style: solid ; /* Tipo de linea. Los valores son (solid,dotted,dashed, double) */
+    border-radius: 5px; /* redondea las esquinas */
+
+    /* margin => Es el margen exterior del elemento que separa una caja de otra. */
+    margin: 15px; /* Sigue la misma logica de valores que padding*/
+    margin: 10px 12px 15px 30px;
+
+    /* box-sizing => Mide el ancho y alto de la caja sumando todas las propiedades aplicadas a el. */
+    box-sizing: border-box; /* */
+    box-sizing: content-box;
+}
+
+* {box-sizing: border-box} /* es una practica habitual aplicarle esta linea a todas las cajas del documento. El asterisco al inicio indica que sera aplicado a todas las cajas */
+
+
