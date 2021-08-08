@@ -1,0 +1,57 @@
+/* MediaQueries: Es una regla que va en la hoja de estilos que se aplicaran SI Y SOLO SI se cumple una condicion determinada para que se vea bien en cualquier contexto. 
+Se debera aplicar siempre que el contenido se vea mal en el dispositivo de salida. 
+
+Breakpoints: Como referencia, se usan los breakpoints (puntos de quiebre sobre los cuales aplicamos un mediaquerie):
+.0 a 480px => Mobiles
+.481 a 768 => Tablets
+.769 a 1279 => Laptops
+.> 1280 => Desktops 
+
+Asi y todo, no deberian aplicarse mas de 4 mediaqueries en toda la hoja de estilo.
+Se escriben siempre al final de la hoja de estilo. */
+
+@media (condicion) {
+    /*Reglas de estilo*/
+}
+
+/* @media = palabra reservada
+condicion = es lo que quiero que se cumpla. Por ejemplo podria usar la condicion min-width:560px para que se apliquen esas reglas si el minimo del ViewPort fuera de 560px. 
+Las condiciones pueden concatenarse usando and => (min-width:360px) and (orientation:landscape)
+Las mas comunes son:
+min-width:400px = Minimo de ancho del ViewPort
+max-width:1000px = maximo de ancho del ViewPort
+Orientation: landscape
+
+
+
+
+*/
+
+body{
+    background-color: salmon;
+    font-family: verdana;
+}
+.titulos{
+    font-size: 30px;
+}
+.parrafos{
+    font-size:18px;
+}
+@media(min-width:560px){
+    body{
+        background-color: transparent;
+    }
+    .titulos{
+        font-size: 24px;
+    }
+    .parrafos{
+        font-size: 15px;
+    }
+}
+@media(min-width:990px) and (orientation:landscape){
+    .parrafos{
+        font-size: 13px;
+    }
+}
+
+

@@ -1,0 +1,47 @@
+/* Medidas Absolutas: son las que se mantienen constantes y no cambian. Por ejemplo el pixel. */
+.caja-madre {
+    width: 600px;
+}
+
+/* Medidas Relativas: son las que cambian si su contexto cambia. Su "contexto" esta referido a el contenedor padre, el tamano de la fuente del sitio, el tamano de la fuente del contenedor padre, el tamano del viewport.
+Las mas comunes son: 
+    a) Porcentaje (%): El porcentaje se refiere siempre al valor del elemento padre o el contenedor en donde se encuentra. No se recomienda usar con el alto, solo con el ancho (width) */
+.caja-hija {
+   width: 50%;  /* En este caso seria 300px */
+}
+/*  
+    b) ViewPort-width (ancho vw): Funciona como el porcentaje pero el contexto referencial no sera la caja en donde esta inserta sino el viewport
+    c) ViewPort-height (alto vh): Funciona igual que el porcentaje pero el contexto referencial no sera la caja en donde esta inserta sino el viewport 
+    EN AMBOS CASOS, LOS VALORES SE EXPRESAN EN ESCALA DE 1 a 100
+    Ej: Tengo un dispositivo con un ViewPort de 420px de ancho y 720px alto y un html con la siguiente estructura: 
+    <section class = "contenedor">
+        <article class="caja> .... </article>
+    </section>    
+    */
+
+    .contenedor {
+        width:90%; /* El valor seria 378px por ser el 90% del ancho de la pantalla del dispositivo*/
+    }
+
+    .caja{
+        width:10vw; /* El valor seria 42x por ser el 90% del ANCHO de la pantalla del dispositivo, NO del contenedor*/
+        height: 10vh; /* El valor seria 72px por ser el 90% del ALTO de la pantalla del dispositivo, NO del contenedor*/
+    }
+
+/* 
+    d) em: Son siempre relativos al elemento padre, tomando como referencia el font-size. El valor 1 equivale a 100%. Si le asignamos 1.5em, el resultante sera font-size * 1.5 = em 
+    Generalmente se usa para las tipografias pero tambien puede usarse para propiedades como margin y padding, para que varien en funcion de las fuentes.
+    Esta propiedad, una vez determinada, afecta al elemento y a todos sus hijos.
+    */
+
+    p {font-size:1.5em; /* El valor seria 24px ya que el font-size por default es 16px*/
+    line-height: 2em;   /* El valor seria 32px ya que la font es 16px *2 = 32px */
+    padding: 1.5em;     /* El valor seria 24px ya que el la font es 16px * 1.5 = 24px */
+        } 
+
+/* 
+    e) rem: Funcionan parecido a los ems pero siempre tomaran de base el tamano de font-size del elemento <html>, es decir, NO ALTERARA A LOS HIJOS NI SE VERA AFECTADO POR SU PADRE. Por ello son mas usados los rem que los em.  */
+
+    p{
+        font-size: 1.5rem;
+    }
