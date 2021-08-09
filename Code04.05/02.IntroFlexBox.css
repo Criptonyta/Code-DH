@@ -1,0 +1,12 @@
+/* Flexbox propone una manera de organizar los elementos presentes en nuestra estructura de HTML. Esta manera busca ser mucho más orgánica y fluida, pensada en los comportamientos naturales que posee cualquier elemento de la vida real con cuatros costados (arriba, derecha, abajo, izquierda).
+
+Si bien hoy en día existen diversas maneras de lograr un diseño visual armónico y estético, Flexbox es una de las más elegidas. Su sencilla implementación la convierte en una excelente herramienta para reorganizar la estructura de nuestros documentos HTML. 
+
+Las propiedades FlexBox generalmente se declaran sobre el contenedor padre 
+
+*/
+
+.contenedor{
+    display:flex; 
+
+}
