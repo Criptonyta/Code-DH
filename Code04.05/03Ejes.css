@@ -1,0 +1,66 @@
+/* 
+Con Flex, no tenemos costados laterales (izquierdo o derecho) ni superior inferior. Es por ello que hablamos de ejes. La idea es tener la libertad de orientacion que nosotros decidamos. 
+Eje es aquella representación imaginaria a partir de líneas que definen la dirección frente a la cual se desplaza un elemento.
+
+Con esto en mente, podemos decir, entonces, que los ejes dentro de un contenedor flex definen la orientación a partir de la cual se desplazarán los elementos internos del mismo.
+
+Un contenedor flex posee dos ejes: el eje principal (el horizontal), llamado también main axis, y el eje transversal(el vertical, llamado cross axis. En ambos ejes, es muy importante el inicio del eje y la finalizacion del eje (start and end). Otro punto importante es el de cruce de los ejes.
+
+------
+
+Propiedades:
+
+flex-direction: row; ==== > permite definir la direccion del eje principal (manteniendolo horizontal por defecto) de izquierda (inicio) a derecha (fin)
+
+flex-direction: column; ==== > permite cambiar la direccion del eje principal (de horizontal a vertical) e iniciando desde arriba, finalizando abajo
+
+flex-direction: row-reverse; ==== > permite definir la direccion del eje principal (manteniendolo horizontal por defecto) de derecha (inicio) a izquierda (fin)
+
+flex-direction: column-reverse; ==== > permite cambiar la direccion del eje principal (de horizontal a vertical) e iniciando desde abajo, finalizando arriba
+
+------
+
+justify-content: Sirve para alinear los elementos a lo largo del eje main. . Sus valores son:
+
+justify-content: start; ====> Los items se alinean al inicio del main
+
+justify-content: end; ====> Los items se alinean al final del main
+
+justify-content: center; ====> Los items se alinean al centro del main
+
+justify-content: space-between; ====> Los items se distribuyen d emanera uniforme desde el inicio del main, enviando el primer elemento al inicio del eje, el ultimo al final y distribuyendo uniformemente el resto de los contenedores en el medio (dejando espacios)
+
+justify-content: space-around; ====> Los items se distribuyen de manera uniforme dejando un espacio al inicio y al final.
+
+------
+
+align-items: Sirve par aalinear los items a lo largo del cross axis. Sus valores son:
+
+align-items: stretch; ====> Los items se ajustan/estiran para abarcar todo el contenedor. Si el cross axis es vertical, se ajustan en funcion de la columna, si es horizontal en funcion de la fila.
+
+align-items: start; ====> Los items se ajustan al inicio del cross axis.
+
+align-items: end; ====> Los items se ajustan al final del cross axis.
+
+align-items: center; ====> Los items se ajustan al centro del cross axis.
+
+------
+
+Sintaxis:
+*/
+
+.frase-cortazar {
+    display: flex; /* <==== Siempre es necesario declarar primero display flex */
+    flex-direction: column-reverse;
+    }
+
+
+
+.nav-bar{
+    display:flex;
+    justify-content: space-around;
+   }
+      
+.enlaces {
+    display:flex;
+    }

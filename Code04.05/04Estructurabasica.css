@@ -1,0 +1,20 @@
+/* 
+Flex-container = Es un elemento HTML, que CONTIENE uno o mas elementos llamados flex-items. 
+
+flex-wrap = Por defecto, los elementos hijos de un contenedor flex van a tratar de entrar en la misma linea (ajustando el tamano de los elementos). 
+*/
+
+.container01 {
+    display:flex;
+    flex-wrap:wrap; /* Si queremos que los elementos mantengan su forma y caigan en la linea siguiente*/
+    flex-wrap:nowrap; /* Si queremos que los elementos ajusten su forma y entren en la linea*/
+    flex-wrap:wrap-reverse;
+}
+
+/*
+flex-items = Un flex-item puede convertirse en un flex-container, asignandole tambien display:flex a sus hijos
+*/
+.elemento-hijo{
+    display:flex;
+}
+
