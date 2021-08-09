@@ -1,41 +1,56 @@
+*{ /* Asterisco es un selector universal de CSS, sus propiedades se aplican a todo el documento */
+box-sizing: border-box; /* Ya que es una regla que deberia aplicarse a todo el documento */
+}
+
+/* En CSS es posible agrupar propiedades utilizando coma. Por ejemplo:
+.contenedor01,
+.contenedor02{
+
+} */
+
+
 body{
     /* background-color: salmon; */
     /* font-family: sans-serif; */
     font-family: 'Lato', sans-serif; /* Copio el codigo CSS que me da GFonts */
 }
 
-h1{
-    font-size: 50px;
-    font-weight: 300; /* Traigo el valor escogiendolo desde GFonts (al lado del nombre de la fuente */
+.oculto {
+    display: none; /* para que por default no se muestre el parrafo oculto, se mostrara al cambiar el display */
 }
 
-h2{
-    font-size: 20px ;
+.contenedor01{
+    width: 70%; /* Para responsive design, conviene siempre trabajar con porcentajes y viewport y no con px. el contenedor debera ocupar el 80% del contenedor que lo contiene */
+    max-width: 1200px; /* Para que el contenedor tenga un maximo de ancho, independientemente del display*/
+    padding:20px; /* al agregarle relleno, el elemento crece en 20 px de cada lado . para que nunca supere y se tome todo uso box-sizing = "border-box"* */
+    border: solid 5px black; padding:20px; /* al agregarle borde, el elemento crece en 10 px de cada lado. para que nunca supere y se tome todo uso box-sizing = "border-box"*/
+    /* height: 400px; conviente no implementar la altura para que el contenido se adapte al fondo */
+    background-color: salmon;
+    margin:auto; /* para que el contenido quede centrado*/
 }
 
-p{
-    font-size: 17px ;
-    line-height: 24px ;
-}
-
-p strong { /*Creo un selector descendente, para que solo el strong que esta dentro del parrafo tenga una caracteristica diferente. OBS. se lee de atras para adelante (es decir, el strong debe estar dentro de una etiqueta p) */
-    background-color: orange;
-    color:white;
-    font-style: italic;
+/* .contenedor02{
+    width: 90vw;  ====> pasa a tomar como referencia el tamano del viewport
+    padding:20px; 
+    border: solid 5px red;
+    background-color: green;
 } 
+*/
 
-
-strong{
-    color:green;
+@media (min-width:570px){ /*Uso min-width porque estoy partiendo de una implementacion mobile first*/
+    .contenedor01{
+        width: 90%;
+        border: solid 5px salmon;
+        background-color: black;
+        color:white;
+    }
 }
 
-.parrafo-destacado {
-    color: salmon;
-    font-size: 30px;
-    line-height: 38px;
-}
-
-.parrafo-destacado em { /*Creo otro selector descendente, en este caso para que se aplique sobre las etiquetas em en cualquier clase de parrafor destacado*/
-    color: red;
-    text-transform: uppercase;
+@media (min-width:900px){
+    .contenedor01{
+        color:red;
+    }
+    .oculto {
+        display: block; /* para mostrar el parrafo oculto en este display */
+    }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width"> <!-- El initial scale es codigo basura por lo que se puede quitar -->
     <title>Mi primer documento HTML</title> <!-- Es lo que se ve en la pestana -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Implementando Google fonts (https://fonts.google.com/) -->
@@ -18,33 +18,18 @@
 
 </head>
 <body>
-    <h4>Soy un h4</h4>
-
-    <h1>El titulo de nuestro documento</h1>
-
-    <h2>Soy un subtitulo cualquiera</h2>
-
-    <img src="/images/leia.jpg" alt="Leia"> <!-- Como estoy usando la variable publicPath, alcanza con que le indique la ruta desde la carpeta public (ya que esta es estatica)-->
-
-    <strong>Otro texto en negrita</strong>
-
-    <p>Lorem ipsum dolor, sit amet <strong>Esto es un texto strong en negrita</strong> adipisicing elit. Sequi unde minus perferendis explicabo? Fugiat nemo itaque neque repellendus earum in sed reprehenderit necessitatibus magni, fugit quis odio repudiandae sit modi.</p>
-
-    <p class="parrafo-destacado">Lorem, ipsum dolor sit amet <em>soy un texto en cursiva </em>consectetur adipisicing elit. Non molestias nemo, voluptates, ipsa culpa, cumque et dicta deserunt ratione obcaecati earum accusantium veritatis molestiae maiores quaerat quasi in magni repellat.</p>
-
-    <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ol>
-
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-
-    <a href="https://www.google.com">Ir a Google</a>
+    <p class="oculto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam provident consequatur corporis</p>
+    <article class="contenedor01">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores exercitationem voluptates accusamus incidunt, reprehenderit quod ex mollitia numquam velit quia pariatur dolore expedita corporis et. Odit nisi aliquam laborum expedita?</p>
+        <article class="contenedor02">Soy el contenedor 02</article>
+    </article>
     
+    <!-- <article class="contenedor02">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores exercitationem voluptates accusamus incidunt, reprehenderit quod ex mollitia numquam velit quia pariatur dolore expedita corporis et. Odit nisi aliquam laborum expedita?</p>
+        <article class="contenedor01">Soy el contenedor 01</article>
+    </article> -->
+
 </body>
 </html>
