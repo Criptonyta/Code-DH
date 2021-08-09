@@ -1,4 +1,6 @@
 /* MediaQueries: Es una regla que va en la hoja de estilos que se aplicaran SI Y SOLO SI se cumple una condicion determinada para que se vea bien en cualquier contexto. 
+Las media queries no son otra cosa más que simples reglas de CSS que agrupan, a su vez, otras reglas que se aplicarán si se cumple una condición determinada. Esta condición generalmente tiene que ver con la resolución de pantalla del dispositivo de salida.
+En otras palabras, las media queries nos van a permitir que la estructura de nuestros documentos HTML se conviertan en estructuras adaptativas o responsive.
 Se debera aplicar siempre que el contenido se vea mal en el dispositivo de salida. 
 
 Breakpoints: Como referencia, se usan los breakpoints (puntos de quiebre sobre los cuales aplicamos un mediaquerie):
