@@ -14,7 +14,7 @@ Propiedades aplicables a los items:
         order: -1;       /*Esta propiedad permite alterar el orden de los elementos. Su valor es un numero entero. En este caso lo cambia de su posicion original, al inicio. Su valor por defecto es 0. El valor 1, llevara el elemento al final. Las cajas se iran ordenando respetando la secuencia desde los numeros negativos hasta los positivos*/
     }
     .item02{
-        align-self: -1;       /*Alinea sobre el cross axis, a cada item al que le apliquemos esta propiedad, independientemente de la propiedad en el contenedor padre. Sus valores son start (alinea los items al inicio), center, end (alinea los items al final) o strech (lo estira para que ocupe todo el crossaxis)*/
+        align-self: -1;       /*Alinea sobre el cross axis, a cada item al que le apliquemos esta propiedad, independientemente de la propiedad en el contenedor padre. Sus valores son flex-start (alinea los items al top), flex-center, flex-end (alinea los items al bottom) o flex-strech (lo estira para que ocupe todo el crossaxis)*/
     }
     .item01, .item02{
         flex-grow: -1;       /*Esta propiedad permite alterar el tamano del elemento, para que llene todos los espacios vacios disponibles en el contenedor. En este caso ambas cajas creceran igual de tamano. Su valor va de 0 a 1 (1 equivale al 100% del espacio disponible)*/
