@@ -1,0 +1,108 @@
+*{
+
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.logo{
+    width: 200px;
+}
+
+.copy-header{
+    max-width: 350px;
+    font-weight: 400px;
+    text-align: right;
+}
+
+.hamburguer-button {
+    background-color: #03264C;
+    color:white;
+    display:block;             /* Convierto el boton en un elemento de bloque */
+    max-width:50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin:auto;             /* Como es un elemento de bloque, solo alineo el boton */
+}
+
+.main-navbar{
+    display: none;           /* Le oculto los items a la lista ya que estos iran en el menu */
+}
+
+.main-navbar ul {   /* Al llamar a la clase + Ul, me refiero a todos los elementos de esa clase lista */
+    list-style:none;          /* Le saco las vinetas a la lista */
+    margin:0px;
+    padding: 0px;
+}
+
+.main-navbar a {  /* Al llamar a la clase + a, me refiero a todos los elementos dentro de clase lista, sin importar si es la izquierda o la derecha */
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;    /* Convierto en elementos de linea para darles padding */
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+@media (min-width: 768px){ /* Partiendo del mobile, comienzo a configurar la version tablet */
+    .main-header-top-bar{
+        /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
+        display: flex; /* Convierto el top bar en un container flex */
+        justify-content: space-between; /* para alinear los elementos */
+    }
+    .copy-header{
+        max-width: 300px; /* defino el ancho del contenedor copy-header */
+        text-align: right; /* para alinear los elementos copy a la izquierda */
+    }
+    .hamburguer-button{
+        display: none; /* oculto el hamburguer button */
+    }
+    .main-navbar{
+        /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-navbar ul{ /* Hago que los elementos de la lista, se muestren uno del lado del otro con flex */
+        display: flex;
+    }
+    .main-navbar li{ /* Hago que los elementos li, tengan un espacio entre ellos */
+        margin: 0px 5px;
+    }
+
+@media(min-width: 1200px){
+    .main-header-top-bar, .main-navbar {
+        max-width: 1200px; /*limito a todos los elementos para que no crezcan mas alla de 1200 */
+        margin:auto;
+    }
+    .main-header-top-bar{
+        align-items: center;
+    }
+
+    .main-navbar li {
+        margin: 0 10px;
+    }
+    .main-navbar a {
+        font-size: 19px;
+    }
+    .copy-header{
+        margin:0px;
+        max-width: none;
+        font-size: 26px;
+        font-weight: 400px;
+    }
+    .logo{
+        width: 250px;
+    }
+    .main-navbar{
+        margin-top: 40px;
+    }
+    }
+}
