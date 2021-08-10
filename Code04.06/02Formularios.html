@@ -1,0 +1,58 @@
+<!-- 
+Formularios = Elementos HTML que nos permiten pedirle datos al usuario que luego podremos validar y procesar. Los datos son capturados con HTML, validados con Js + Node y Validados con Node
+
+Etiquetas:  
+-->
+
+<form></form>               <!-- Posee dos atributos posibles action y method -->
+<form action=""></form>     <!-- Determina la ruta a donde iran las informaciones capturadas -->
+<form method=""></form>     <!-- Define como se enviara la informacion (valores GET y POST) -->
+
+<label></label>             <!-- Sirve para asociar un texto descriptivo a un campo determinado. For 
+                            asocia el label con un campo por su propiedad id. Para que el label quede asociado, el campo a asociar debe poseer un id con el mismo valor que se uso en el for del label -->
+<label for ="nombre">Nombre:</label>
+<input type="text" name="nombre" id="nombre">
+
+
+<input>                     <!-- Es una etiqueta multifuncion, podemos generar distintos tipos
+                            de campos con ella. SIEMPRE deben estar identificados/acompanados del atributo name para que la informacion pueda ser enviada. Sus posibles atributos son:  -->
+<input type="text">         <!-- Sus valores posibles son: "text", "password", "email", "tel" -->
+
+<textarea></textarea>       <!-- Campo para textos mas largos, como comentarios -->
+
+<select></select>           <!-- Sirve para aplicar listas desplegables en una cajita con las 
+                            opciones que queremos mostrar. Para eso utilizamos select junto con la etiqueta option, pudiendo elegir solo uno de ellos. Ej -->
+<select>
+    <option>Argentina</option>
+    <option>Brasil</option>
+    <option>Bolivia</option>
+</select>
+
+<button></button>            <!-- Elemento que sirve para enviar informaciones (submit) o borrar 
+                            (reset) el formulario. Para ello, van acompanados de sus atributos:  -->
+<button type="reset">Borrar</button>
+<button type="submit">Enviar</button>
+
+<!-- Otros atributos que pueden aplicarse a cualquier formulario -->
+name= "Texto"               <!-- permite identificar a cada campo en particular. Los que no lo tengan
+                            no se envian -->
+value=                      <!-- es para campos que no permiten insersion de texto -->
+required                    <!-- marca que un campo es obligatorio. No lleva valor -->
+placeholder="Texto"         <!-- nuestra un campo de ayuda -->
+
+
+<form action="" method="">
+    <div>
+        <label>Nombre Completo:</label>
+        <input type="text" name="nombreDeUsuario">
+    </div>
+    <div>
+        <label>Contrasena</label>
+        <input type="password" name="passwordDeUsuario">
+    </div>
+    <div>
+        <label>Correo Electronico:</label>
+        <input type="email" name="emailUsuario">
+    </div>
+    <button type="submit">Enviar</button>
+</form>
