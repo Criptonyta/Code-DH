@@ -1,0 +1,79 @@
+/* 
+Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+
+
+FALTA RESOLVER:
+Micro desafíos - Paso I
+
+
+● Nos piden que manejemos el logo del envío, el precio, el porcentaje de descuento
+y la descripción del artículo como elementos de una caja dentro de la caja general
+del artículo.
+● Nos piden que la misma tenga un borde superior de 1 píxel, línea sólida y color
+#ebebeb.
+● Debe tener separado el contenido de sus bordes en 15 píxeles en cada uno de sus
+lados.
+
+*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #EAC926;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.burger-menu{
+    background-color:#03264C;
+    color: white;
+    size: 42px;
+    width: 25px;
+    text-align: center;
+    margin: 10px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+.cards-productos{
+    margin-top:10px;                     /*   04.04.08 - Microdesafio 1. paso 2 - Entre cada artículo hay una separación de 10 píxeles.*/
+}
+
+.precio{
+    font-size: 18px;
+}
+
+.descuento{
+    font-size: 16px;
+}
+
+.descripcion{
+    font-size: 16px;
+}
+
+main{                        /*   04.04.08 - Microdesafio 1. paso 1 - centrar la sección main y que ocupe un 90% del ancho de la pantalla. */
+    width: 90vw;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin: 0 auto;
+    border: dotted 2px red;
+}
+
+footer{
+    text-align: center;
+}
