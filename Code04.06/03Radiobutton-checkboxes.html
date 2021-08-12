@@ -1,0 +1,17 @@
+<!-- Radio button = son botones de opcion (solo pueden marcarse una vez). 
+- La etiqueta label, permite anidar el fomulario para que a este, podamos asociarlo a un texto que describira la opcion del boton.
+- El atributo type, permite idendificar el tipo de boton que queremos para el formulario,
+- El atributo name, asignando el mismo valor a todos ellos, permite agrupar esas opciones para que solo se pueda elegir una de ellas
+- El atributo value, es el valor que el sistema enviara a la BD, una vez escogido y enviado el formulario
+- El atributo checked (no lleva valor), indica que queremos qwue esa opcion venga marcada por defecto  -->
+
+<label><input type="radio" name="tipoSuscripcion" value="mensual">Mensual</label>
+<label><input type="radio" name="tipoSuscripcion" value="trimestral">Trimestral</label>
+<label><input type="radio" name="tipoSuscripcion" value="anual" checked>Anual</label>
+
+<!-- Checkboxes = son cajas de verificacion que permiten mas de una opcion.
+La estructura y atributos funciona igual que el anterior -->
+
+<label><input type="checkbox" name="pasatiempos" value="tv">Ver TV</label>
+<label><input type="checkbox" name="pasatiempos" value="juegos">Jugar videojuegos</label>
+<label><input type="checkbox" name="pasatiempos" value="musica" checked>Escuchar musica</label>

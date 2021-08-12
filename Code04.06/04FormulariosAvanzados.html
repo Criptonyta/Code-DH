@@ -1,0 +1,33 @@
+<!-- Otros atributos y valores que puede contener la etiqueta input en lo referido a formularios son 
+- type 
+- name 
+- value 
+- placeholder 
+- required 
+- date
+- file
+
+CALENDARIO => El atributo date, despliega un calendario. Si quisiera que envie una fecha determinada, solo es necesario incluir la etiqueta value. 
+Adicionalmente puede recibir como atributo min="aaaa-mm-dd" para definir una fecha minima o max="aaaa-mm-dd" para recibir una fecha maxima
+Su sintaxis es:  -->
+
+<input type="date" name="fechaNacimiento" value="1985-08-28">
+
+<!-- 
+CARGAR ARCHIVOS => El atributo file, abre un explorador para que el usuario pueda subir un archivo. 
+Por defecto, permite subir solo un archivo. Para subir mas de uno, precisamos incorporar el atributo "multiple" 
+Tambien podemos determinar que tipo de archivos pueden ser cargados, usando el atributo "accept" -->
+
+<input type="file" name="imagenDePerfil">
+<input type="file" name="imagenDePerfil" multiple>
+<input type="file" name="imagenDePerfil" multiple accept=".jpeg, .png">
+
+<!-- 
+VALIDACION DE FORMULARIOS => La validacion de formularios puede ser realizada tanto en el frontend como en el backend. Para eso, usamos la etiqueta span, para que reciba el texto de feedback al usuario (el comportamiento debera ser programado en Js), caso exista algun error en los datos del formulario -->
+
+<div>
+    <label>Nombre completo:</label>
+    <input type="text" name="nombreUsuario">
+    <span class="feedback"></span>
+</div>
+
