@@ -23,4 +23,5 @@ app.listen(puerto, () => console.log("escuchando servidor en el puerto...."))
 // 5) Git remote origin "url del repositorio"
 // 6) Git push origin master 
 // 7) git push heroku master     (con esto envio todo el codigo a heroku)
+// 8) en el terminal "heroku open"
 
