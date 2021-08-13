@@ -1,0 +1,208 @@
+/* 
+Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #ebebeb;
+    margin:0px;
+}
+.main-header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+header{
+    background-color: #EAC926;
+    padding:0px;
+    margin:0px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.logo{
+    width: 200px;
+}
+
+.navbar-right, .navbar-left{ /*   04.04.08 - Microdesafio codereview - Solo para la versión mobile, ocultar el site y el login navbar. */
+    display:none;
+    margin:10px;
+}
+
+.copy-header{
+    max-width: 350px;
+    font-weight: 400px;
+    text-align: right;
+}
+
+.barraDeBusqueda, .logo, .compra-en-cuotas{
+    margin:10px;
+}
+
+.hamburguer-button {
+    background-color: #03264C;
+    color:white;
+    display:block;             /* Convierto el boton en un elemento de bloque */
+    max-width:50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin:auto;             /* Como es un elemento de bloque, solo alineo el boton */
+}
+
+.main-navbar{
+    display: none;           /* Le oculto los items a la lista ya que estos iran en el menu */
+}
+
+.main-navbar ul {   /* Al llamar a la clase + Ul, me refiero a todos los elementos de esa clase lista */
+    list-style:none;          /* Le saco las vinetas a la lista */
+    margin:0px;
+    padding: 0px;
+}
+
+.main-navbar a {  /* Al llamar a la clase + a, me refiero a todos los elementos dentro de clase lista, sin importar si es la izquierda o la derecha */
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;    /* Convierto en elementos de linea para darles padding */
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+.cards-productos{
+    margin-top:10px;                     /*   04.04.08 - Microdesafio 1. paso 2 - Entre cada artículo hay una separación de 10 píxeles.*/
+    background-color: white;
+}
+
+.texto-cards-productos{ /*   04.04.08 - Microdesafio 1. paso 3, 4 y 5 - logo del envío, el precio, el porcentaje de descuento
+                        y la descripción del artículo como elementos de una caja dentro de la caja general
+                        del artículo. ● Nos piden que la misma tenga un borde superior de 1 píxel, línea sólida y color
+                        #ebebeb.● Debe tener separado el contenido de sus bordes en 15 píxeles en cada uno de sus
+                        lados.*/
+border-top: 1px solid #ebebeb;
+margin: 15px;
+}
+
+i{                      /* Altera el tamano de los iconos font-awesome */
+    font-size:18px;
+}
+
+.precio{
+    font-size: 18px;
+}
+
+.descuento{
+    font-size: 16px;
+}
+
+.descripcion{
+    font-size: 16px;
+    display:none;           /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+}
+
+main{                        /*   04.04.08 - Microdesafio 1. paso 1 - centrar la sección main y que ocupe un 90% del ancho de la pantalla. */
+    width: 90vw;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+footer{
+    text-align: center;
+}
+
+@media (min-width: 361px){  /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte: ● Navegación en tablets (ancho mínimo 361 px) */
+.descripcion{
+    display: flex;
+    justify-content:center; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+}
+.cards-productos{           /*   04.04.08 - Microdesafio 2 - Agregar box-shadow. Para los dispositivos tablet o de resoluciones superiores,. */
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.navbar-right, .navbar-left{ /*   04.04.08 - Microdesafio codereview - Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen del menú hamburguesa. */
+    list-style: none;
+    display: inline-block;    /* Convierto en elementos de linea para darles padding */
+    padding: 5px 0;
+}
+.burger-menu{                  /*   04.04.08 - Microdesafio codereview - Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen del menú hamburguesa. */
+    display:none;
+}
+}
+
+@media (min-width:769px){   /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte:● Navegación en desktop (ancho mínimo 769 px) */
+.descripcion{
+    display: flex;
+    justify-content:center; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+}
+}
+@media (min-width: 768px){ /* Partiendo del mobile, comienzo a configurar la version tablet */
+    .main-header-top-bar{
+        /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
+        display: flex; /* Convierto el top bar en un container flex */
+        justify-content: space-between; /* para alinear los elementos */
+    }
+    .copy-header{
+        max-width: 300px; /* defino el ancho del contenedor copy-header */
+        text-align: right; /* para alinear los elementos copy a la izquierda */
+    }
+    .hamburguer-button{
+        display: none; /* oculto el hamburguer button */
+    }
+    .main-navbar{
+        /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-navbar ul{ /* Hago que los elementos de la lista, se muestren uno del lado del otro con flex */
+        display: flex;
+    }
+    .main-navbar li{ /* Hago que los elementos li, tengan un espacio entre ellos */
+        margin: 0px 5px;
+    }
+
+@media(min-width: 1200px){
+    .main-header-top-bar, .main-navbar {
+        max-width: 1200px; /*limito a todos los elementos para que no crezcan mas alla de 1200 */
+        margin:auto;
+    }
+    .main-header-top-bar{
+        align-items: center;
+    }
+
+    .main-navbar li {
+        margin: 0 10px;
+    }
+    .main-navbar a {
+        font-size: 19px;
+    }
+    .copy-header{
+        margin:0px;
+        max-width: none;
+        font-size: 26px;
+        font-weight: 400px;
+    }
+    .logo{
+        width: 250px;
+    }
+    .main-navbar{
+        margin-top: 40px;
+    }
+    }
+}
