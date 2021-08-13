@@ -20,15 +20,19 @@ body{
     background-color: #ebebeb;
     margin:0px;
 }
+/* .image-product{
+    height: 180px;
+    width: 180px; 
+} */
 .main-header{
     background-color: #EAC926;
     padding: 20px;
 }
-header{
+/* header{
     background-color: #EAC926;
     padding:0px;
     margin:0px;
-}
+} */
 
 h3{
     font-size: 24px;
@@ -86,6 +90,19 @@ h3{
 .cards-productos{
     margin-top:10px;                     /*   04.04.08 - Microdesafio 1. paso 2 - Entre cada artículo hay una separación de 10 píxeles.*/
     background-color: white;
+
+    font-size: 16px;               
+
+/*     display: block;                           04.05.07 - Adicionados parametros para cards segun ejercicio 
+        padding: 5px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px; */
 }
 
 .texto-cards-productos{ /*   04.04.08 - Microdesafio 1. paso 3, 4 y 5 - logo del envío, el precio, el porcentaje de descuento
@@ -146,12 +163,6 @@ footer{
 }
 }
 
-@media (min-width:769px){   /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte:● Navegación en desktop (ancho mínimo 769 px) */
-.descripcion{
-    display: flex;
-    justify-content:center; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
-}
-}
 @media (min-width: 768px){ /* Partiendo del mobile, comienzo a configurar la version tablet */
     .main-header-top-bar{
         /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
@@ -176,6 +187,13 @@ footer{
     .main-navbar li{ /* Hago que los elementos li, tengan un espacio entre ellos */
         margin: 0px 5px;
     }
+      
+    .descripcion{ /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte:● Navegación en desktop (ancho mínimo 769 px) */
+        display: flex;
+        justify-content:center; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+    }
+        
+}
 
 @media(min-width: 1200px){
     .main-header-top-bar, .main-navbar {
@@ -203,6 +221,5 @@ footer{
     }
     .main-navbar{
         margin-top: 40px;
-    }
     }
 }

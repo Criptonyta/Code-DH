@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width>
+    <meta name="viewport" content="width=device-width">
     <title>MercadoLiebre</title>
 
     <!-- Adicionando Google Fonts -->
@@ -15,8 +15,9 @@
     <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script>
     
     <!-- Vinculando la hoja de estilo -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css"> 
+
 </head>
 
 
@@ -52,13 +53,13 @@
                     <li><a href="#">Ayuda</a></li>
                 </ul>
                 
-                <ul call="right-navbar">
+                <ul class="right-navbar">
                     <li><a href="#">Creá tu cuenta <i class="far fa-id-card"></i></a></li> <!--Pego los iconos de font-awesome -->
                     <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                     <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
                 </ul>
         </nav>
-        </nav>
+
 
         
         <!-- Adicionando Boton menu burger-->
@@ -74,7 +75,7 @@
             <!-- Adicionando clases CSS -->
             <h3>Basado en tu ultima visita</h3>
             <article class="cards-productos">
-                <img src="./images/img-cafetera-moulinex.jpg" alt="Cafetera" width="180px" height="180px">
+                <img src="./images/img-cafetera-moulinex.jpg" class="image-product" alt="Cafetera" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly" ></i>
                     <p class="precio">$6.770</p> 
@@ -84,7 +85,7 @@
             </article>
 
             <article class="cards-productos">
-                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook" width="180px" height="180px">
+                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly" ></i>
                     <p class="precio">$230.000</p>
@@ -94,7 +95,7 @@
             </article>
 
             <article class="cards-productos">
-                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy" width="180px" height="180px">
+                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly"></i>
                     <p class="precio">$70.500</p>
@@ -104,7 +105,7 @@
             </article>
 
             <article class="cards-productos">
-                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43" width="180px" height="180px">
+                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly"></i>
                     <p class="precio">$23.200</p>
@@ -118,7 +119,7 @@
         <section class="ofertas">
             <h3>Seccion de Ofertas</h3>
             <article class="cards-productos">
-                <img src="./images/img-cafetera-moulinex.jpg" alt="Cafetera" width="180px" height="180px">
+                <img src="./images/img-cafetera-moulinex.jpg" alt="Cafetera" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly"></i>
                     <p class="precio">$6.770</p>
@@ -128,7 +129,7 @@
             </article>
 
             <article class="cards-productos">
-                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook" width="180px" height="180px">
+                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly"></i>
                     <p class="precio">$230.000</p>
@@ -138,7 +139,7 @@
             </article>
 
             <article class="cards-productos">
-                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy" width="180px" height="180px">
+                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly"></i>
                     <p class="precio">$70.500</p>
@@ -148,7 +149,7 @@
             </article>
 
             <article class="cards-productos">
-                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43" width="180px" height="180px">
+                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43" class="image-product" style="width:180px; height:180px;">
                 <div class="texto-cards-productos">
                     <i class="fas fa-dolly"></i>
                     <p class="precio">$23.200</p>
@@ -160,7 +161,7 @@
         </section>    
     </main>
 <br>
-<br>
+
 
     <footer>           <!-- Microdesafio - Code Review - Alineando textos y add iconos-->
         
@@ -188,7 +189,6 @@
             </article>
         </section>
         <br>
-        <br>
         <section>
             <article>
                 <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
@@ -203,7 +203,14 @@
 
 
 
-<!-- Para llevar de local a Github pages
+<!-- Para llevar de local a Github pages y que no dejen de funcionar las imagenes,
+    reemplazar los siguientes terminos: 
+
+1) Copiar el codigo local (HTML y CSS) y pegarlo en Grupo01/ClaseWeb (View/HTML y Public/CSS, styles y normalize),
+2) En index.html, reemplazar "./images/" por "../public/images/"
+3) En index.html, reemplazar "./css/" por "../public/CSS/"
+4) Salvar y git push origin master
+
 "./images/img-tv-samsung-smart.jpg" Local "./css/styles.css"
 "../public/images/img-tv-samsung-smart.jpg" GitHub "../public/CSS/styles.css"
  -->
