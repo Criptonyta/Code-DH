@@ -275,6 +275,10 @@ iframe {
 .latest .featured-image .ribbon .text:after {
   right: 0;
 }
+.list-unstyled{
+  font-size: 14px;
+}
+
 /* Projects Section */
 .projects .item {
   margin-bottom: 30px;
