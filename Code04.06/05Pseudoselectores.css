@@ -1,0 +1,64 @@
+/* Pseudo selectores
+En ocasiones, al estar navegando dentro de un sitio web, se generan cambios visuales cuando pasamos con el cursor del mouse sobre un determinado elemento, o cuando ya hemos visitado un determinado enlace.
+Este tipo de comportamientos se pueden dar gracias a algo que en CSS se conoce como los pseudo selectores. Estos nos van a permitir configurar el comportamiento visual de un determinado elemento en relación de lo que pase con el mismo en pantalla. 
+
+Estan divididos en dos grupos: 
+a) PSEUDOCLASES => Permiten aplicar estilos dependiendo de la ubicacion dentro del HTML y sus atributos
+    PSEUDOCLASES PARA ENLACES (Todos ellos, Seran anulados por cualquier otra pseudoclase posterior aplicada a ese enlace):
+        1) :link => Se usa para aplicar estilo a los enlaces <a></a> que usan href. 
+        2) :visited => Se usa para aplicar estilo a los enlaces <a></a> que HAN SIDO VISITADOS al menos una vez.
+        3) :hover => Esta relacionado a los links pero puede aplicarse a cualquier otro elemento HTML. Se utiliza sobre cualquier estilo sobre el cual el usuario pone el cursor
+        4) :active => Se aplica sobre los enlaces <a></a> que estan siendo clicados por el usuario. Normalmente se usa para la animacion del click
+        
+        */
+
+        a:link{
+            background-color: rgb(234, 0, 255);
+            border-color: rgb(161,17,89);
+            color:red;
+        }
+        a:visited {
+            color: rgb(98,9,194);
+            font-weight: bold;
+        }
+        a:hover{
+            background-color:gold;
+        }
+        a:active{
+            color:rgb(136, 11, 74);
+        }
+
+/*
+    PSEUDOCLASES PARA INPUTS:
+        1) :focus => Se aplica cuando el elemento tiene el foco del cursor., es decir, cuando el cursor se encuentra dentro de ese elemento.(por ejemplo cuando se completa un campo en un formulario)
+        2) :enabled =>
+        3) :disabled => Normalmente se usa para darle formato a los elementos de un formulario que no pueden ser completados o a las opciones que estan desactivadas
+        4) :target => 
+
+        MAS PSEUDOSELECTORES AQUI => https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes#Indice_de_las_pseudo-clases_est%C3%A1ndar
+
+*/
+        input:focus {
+            color:orange;
+            font-weight:bold;
+        }
+        input:disabled{
+            background-color: gray;
+        }
+
+
+/*
+b) PSEUDOELEMENTOS => Permiten crear elementos directamente en CSS sin tener que modificar la estructura HTML. Se usan junto con los selectores En lugar de dos puntos se usan 4 (::). Los mas usados son:
+        1) ::before => Se utiliza junto con la propiedad content, para introducir contenido en el documento usando CSS, que aparecera ANTES del contenido interno del elemento 
+        2) ::after => Se utiliza junto con la propiedad content, para introducir contenido en el documento usando CSS, que aparecera DESPUES del contenido interno del elemento 
+        3) ::first-letter =>
+        4) ::first-line => 
+ */
+        div::before{
+            content: "Esto se renderiza antes del elemento";
+            color: red;
+        }
+        div::after{
+            content: "Esto se renderiza despues del elemento";
+            color: red;
+        }
