@@ -1,0 +1,37 @@
+/* 
+
+Position
+Hasta el momento, el posicionamiento de tipo Flexbox nos ha permitido generar una estructura de elementos bastante organizada y estéticamente prolija.
+
+Sin embargo, ¿qué pasa cuando necesitamos solapar un elemento por encima de otro?, ¿o cuando queremos que, por ejemplo, la barra de navegación de nuestro sitio web se quede inmóvil por más que hagamos scroll en el navegador?
+
+Este tipo de comportamientos son posibles en los otros tres tipos de posicionamiento que nos brinda CSS, los cuales buscan darnos más herramientas para lograr que nuestros documentos HTML tengan el mejor flujo posible dentro del navegador.
+
+
+
+
+Position => Permite desplazar elementos desde su ubicacion original, como complemento de Flexbox para resolver algunas problematicas puntuales(como por ejemplo, la superposicion de elementos) 
+
+Valores que puede asumir la propiedad
+1) static => Es la que viene asignada por defecto
+
+2) absolute => Permite desplazar el objeto TOMANDO COMO REFERENCIA LOS COSTADOS DEL BODY. Para definir la nueva posicion usamos top, bottom, right, left, con valor en px (admite valores negativos). 
+
+3) relative => Para definir la nueva posicion usamos top, botton right left con valor en px (admite valores negativos). Los elementos SE DESPLAZAN TOMANDO COMO REFERENCIA SU POSICION ORIGINAL
+
+4) fixed => permite fijar elementos en la pantalla para que no se muevan dependiendo del scroll
+
+
+*/
+
+.caja-azul {
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+}
+
+.caja-roja {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}

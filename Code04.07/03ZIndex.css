@@ -1,0 +1,28 @@
+/* 
+Z-index
+Seguramente hemos escuchado el concepto de "plano cartesiano", y lo primero que se nos viene a la cabeza son los cuadrantes y los ejes x e y.
+
+Y si bien esto no está del todo mal, hay un plano que quizás, por ahí, no estamos teniendo en cuenta… Nos referimos al eje z.
+
+Pero ¿qué tiene que ver esto con HTML y CSS?
+
+Pues bien, sucede que dentro de un documento HTML, y gracias a la magia de CSS, es posible llevar hacia atrás o traer hacia adelante un elemento determinado. En resumidas cuentas, lo estamos "moviendo" en el eje z, el de la profundidad. 
+
+
+
+
+Z-Index => . nos permite cambiar el orden de las "capas" dentro del documento HTML.
+. Solo es posible aplicarlo en los elementos que tengan position relative, absolute o fixed.
+. El valor por defecto de Z-index es 0 (NO SON PX). Si a cualquier elemento le asignamos un valor mayor, se superpodra a los otros
+
+*/
+
+.caja-1{
+position: relative;
+left:100px;
+top:50px;
+}
+.caja-2{
+position: relative;
+z-index:10;
+}

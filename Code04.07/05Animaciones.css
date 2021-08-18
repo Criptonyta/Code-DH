@@ -1,0 +1,27 @@
+/* Animaciones
+
+Las animaciones sirven —y mucho— para llamar la atención de los visitantes del sitio hacia algún llamado a la acción específico que, como desarrolladores, queramos generar.
+
+El concepto clave de una animación generada con CSS son los keyframes o fotogramas. Estos son los contenidos que se muestran en un elemento en un segundo, algo similar a lo que pasa con un video, donde este no es otra cosa que una secuencia de fotografías pasadas de manera muy rápida, dando la sensación de movimiento.
+
+@keyframes => Usando la palabra reservada keyframes, le definimos un nombre y entre parentesis, indicaremos los diferentes valores (van de 0% a 100%) que queramos para toda la animacion. 
+
+Propiedades mas representativas para configurar la animacion (van en el elemento css, no en @keyframes):
+    animation-name: Define cual es la animacion que queremos usar (se usa el nombre definido en @keyframe)
+    animation-duration: Establece el tiempo que va a durar
+    animation-interation-count: Establece la cantidad de veces que se repetira. infinite la reproduce indefinidamente
+
+*/
+
+@keyframes fantasma {
+    0% {opacity: 0%};
+    25% {transform: translateY(-20x); opacity:100%};
+    100% {opacity: 0%;}
+}
+
+/* La forma abreviada de declararla es */
+
+.fantasma {
+    animation: fantasma 3s infinite;
+}
+

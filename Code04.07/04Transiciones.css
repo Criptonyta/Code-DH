@@ -1,0 +1,58 @@
+/* Transiciones
+Cuando jugamos un poco con la pseudo clase :hover, es fácil darnos cuenta que la misma es realmente genial, dado que nos permite generar un cambio de estado del elemento dependiendo de si el cursor del mouse pasa sobre este o no.
+
+Sin embargo, puede que en ocasiones queramos que dicho cambio se pueda hacer de una manera un poco más sútil, de una manera un poco más amena, y no tan "brusca" como suele darse.
+
+Es por ello que CSS, hoy en día, nos brinda la posibilidad de implementar transiciones. Estas nos permiten lograr que estos cambios de estado se puedan ejecutar de una manera sutil y agradable para el ojo del visitante. 
+
+
+
+Transiciones => Necesitan:
+    a) Una propiedad con un valor inicial,
+    b) una interaccion por la cual ese valor se vera modificado, (en este caso, la pseudoclase :hover)
+    c) el nuevo valor que cobrara la propiedad             
+
+Valores de la propiedad transition:
+    transition-property: Sirve para definir los nombres de las propiedades CSS sobre las cuales aplicar el efecto. Podemos usar varias, separadas por comas.
+    transition-duration: Sirve para establecer la duracion de la transicion. El valor por defecto es 0s (segundos) o 0ms (milisegundos)
+
+*/
+
+.button{
+    background-color: #eaeaea;
+    color: #000;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+/* Tambien podemos usar una forma mas resumida de la propiedad (el resultado sera el mismo pero escribimos menos).... */
+
+.button{
+    background-color: #eaeaea;
+    color: #000;
+    transition: 
+        background-color, 0.5s,
+        color, 0.5s;
+}
+
+/* Usando la palabra reservada all, podemos crear transiciones para todas las propiedades de todos los elementos */
+
+.button{
+    background-color: #eaeaea;
+    color: #000;
+    transition: 
+        all, 0.5s;
+}
+
+/* Otro ejemplo */
+
+.mi-elemento {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: border-radius 450ms;
+}
+ 
+.mi-elemento:hover {
+    border-radius: 50%;
+}
