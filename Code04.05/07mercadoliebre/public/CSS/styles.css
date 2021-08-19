@@ -20,19 +20,15 @@ body{
     background-color: #ebebeb;
     margin:0px;
 }
-/* .image-product{
-    height: 180px;
-    width: 180px; 
-} */
+
+
+/* ===========   HEADER    ===========   */
+
+
 .main-header{
     background-color: #EAC926;
     padding: 20px;
 }
-/* header{
-    background-color: #EAC926;
-    padding:0px;
-    margin:0px;
-} */
 
 h3{
     font-size: 24px;
@@ -87,49 +83,9 @@ h3{
     font-size: 17px;
 }
 
-.cards-productos{
-    margin-top:10px;                     /*   04.04.08 - Microdesafio 1. paso 2 - Entre cada artículo hay una separación de 10 píxeles.*/
-    background-color: white;
 
-    font-size: 16px;               
 
-/*     display: block;                           04.05.07 - Adicionados parametros para cards segun ejercicio 
-        padding: 5px;
-        height: 30px;
-        width: 30px;
-        border: 1px solid #39b54a;
-        background-color: #FFF;
-        border-radius: 50%;
-        position: absolute;
-        right: 20px;
-        top: -15px; */
-}
-
-.texto-cards-productos{ /*   04.04.08 - Microdesafio 1. paso 3, 4 y 5 - logo del envío, el precio, el porcentaje de descuento
-                        y la descripción del artículo como elementos de una caja dentro de la caja general
-                        del artículo. ● Nos piden que la misma tenga un borde superior de 1 píxel, línea sólida y color
-                        #ebebeb.● Debe tener separado el contenido de sus bordes en 15 píxeles en cada uno de sus
-                        lados.*/
-border-top: 1px solid #ebebeb;
-margin: 15px;
-}
-
-i{                      /* Altera el tamano de los iconos font-awesome */
-    font-size:18px;
-}
-
-.precio{
-    font-size: 18px;
-}
-
-.descuento{
-    font-size: 16px;
-}
-
-.descripcion{
-    font-size: 16px;
-    display:none;           /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
-}
+/* ===========   BODY    ===========   */
 
 main{                        /*   04.04.08 - Microdesafio 1. paso 1 - centrar la sección main y que ocupe un 90% del ancho de la pantalla. */
     width: 90vw;
@@ -141,14 +97,110 @@ main{                        /*   04.04.08 - Microdesafio 1. paso 1 - centrar la
 
 }
 
+.container-productos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.image-product{
+    min-width: 50px;                      /* Ajusto las imagenes al tamano del contenedor
+    height: auto;
+} */
+
+
+.cards-productos{
+    margin-top:10px;                     /*   04.04.08 - Microdesafio 1. paso 2 - Entre cada artículo hay una separación de 10 píxeles.*/
+    background-color: white;
+    font-size: 16px;
+    /* display: inline-block; */
+    max-width: 10vw;                       /*    04.05.07 - Nuestro nuevo desafío es desarrollar la Home utilizando Flexbox, teniendo en cuenta que el sitio debe ser 100% responsive. ¿Qué debemos modificar para que, aplicando Flexbox, solo se vea un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos para la versión desktop?
+     display: block;                           04.05.07 - Adicionados parametros para cards segun ejercicio 
+        padding: 5px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        top: -15px; */
+}
+
+.texto-cards-productos{ /*   04.04.08 - Microdesafio 1. paso 3, 4 y 5 - logo del envío, el precio, el  porcentaje de descuento y la descripción del artículo como elementos de una caja dentro de la caja general del artículo. ● Nos piden que la misma tenga un borde superior de 1 píxel, línea sólida y color
+#ebebeb.● Debe tener separado el contenido de sus bordes en 15 píxeles en cada uno de sus lados.*/
+                        
+border-top: 1px solid #ebebeb;
+margin: 15px;
+}
+
+i{                      /* Altera el tamano de los iconos font-awesome */
+    font-size:18px;
+}
+
+.texto-cards-productos i{           /* Formato font-awesome camion*/
+    color: green;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+    position: relative;
+    bottom: 15px;
+}
+
+.precio{
+    /* font-size: 18px; */
+    width: 30vw;                    /* 04.05.07 - Para cada uno de los artículos debemos:
+    ○ Lograr que el precio y el descuento de los artículos estén en el mismo renglón, donde el precio ocupa el 30% y el descuento el 70% del total del renglón.*/
+}
+
+.descuento{
+    font-size: 16px;
+    color:green;
+    width: 70vw;                    /* 04.05.07 - Para cada uno de los artículos debemos:
+    ○ Lograr que el precio y el descuento de los artículos estén en el mismo renglón, donde el precio ocupa el 30% y el descuento el 70% del total del renglón.*/
+}
+
+.precio, .descuento{               /* 04.05.07 - Para cada uno de los artículos debemos:
+    ○ Lograr que el precio y el descuento de los artículos estén en el mismo renglón, donde el precio ocupa el 30% y el descuento el 70% del total del renglón.*/
+    font-weight: bold;
+    display: flex;
+    justify-content: left;
+}
+
+.preciodescuento{
+    display: flex;
+    justify-content: left;
+}
+
+.descripcion{
+    font-size: 14px;
+    /* font-weight: bold; */
+    display:none;           /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+    padding-bottom: 40px;
+}
+
+
+
+
+/* ===========   FOOTER    ===========   */
+
+
 footer{
     text-align: center;
 }
 
+
+
+
+/* ===========   RESPONSIVE    ===========   */
+
+
 @media (min-width: 361px){  /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte: ● Navegación en tablets (ancho mínimo 361 px) */
 .descripcion{
     display: flex;
-    justify-content:center; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+    justify-content:left; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
 }
 .cards-productos{           /*   04.04.08 - Microdesafio 2 - Agregar box-shadow. Para los dispositivos tablet o de resoluciones superiores,. */
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -161,7 +213,13 @@ footer{
 .burger-menu{                  /*   04.04.08 - Microdesafio codereview - Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen del menú hamburguesa. */
     display:none;
 }
+
+.container-productos {
+    display:flex;
+    max-width: 50vw;                       /*    04.05.07 - Nuestro nuevo desafío es desarrollar la Home utilizando Flexbox, teniendo en cuenta que el sitio debe ser 100% responsive. ¿Qué debemos modificar para que, aplicando Flexbox, solo se vea un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos para la versión desktop? */
 }
+}
+
 
 @media (min-width: 768px){ /* Partiendo del mobile, comienzo a configurar la version tablet */
     .main-header-top-bar{
@@ -190,10 +248,16 @@ footer{
       
     .descripcion{ /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte:● Navegación en desktop (ancho mínimo 769 px) */
         display: flex;
-        justify-content:center; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
+        /* justify-content:center;   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
     }
+    .cards-producto {
+        display: inline-block;
+        max-width: 25vw;                       /*    04.05.07 - Nuestro nuevo desafío es desarrollar la Home utilizando Flexbox, teniendo en cuenta que el sitio debe ser 100% responsive. ¿Qué debemos modificar para que, aplicando Flexbox, solo se vea un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos para la versión desktop? */
+        }
         
 }
+
+
 
 @media(min-width: 1200px){
     .main-header-top-bar, .main-navbar {
