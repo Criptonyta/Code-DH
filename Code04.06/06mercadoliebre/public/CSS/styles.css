@@ -1,3 +1,16 @@
+/* 
+Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+*/
+
+
+
+
 *{
     box-sizing: border-box;
 }
@@ -151,33 +164,59 @@ footer {
 }
 
 .footer-content .bottom-content {
-    padding: 40px;
+    padding: 20px;
 }
 
 .footer-icon {
-font-size:25px;
+    font-size:25px;
+    color: #1259c3;
 }
 
 h1 {
     text-align: center;
 }
 
+.nombreProducto {
+    display: none;
+}
+
+/* ==========   REGISTRO Y LOGIN    ========== */
+
 .registro-form{
-    width:90%;
-    margin:auto;
+    max-width: 60%;
+    margin: 20px auto 60px auto;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .registro-form div{
-    margin: 20px 0px;
+    width: 60%;
+    margin: 15px 0px;
 }
+
 .registro-form div input{
     display: block;
-   width:100%;
+    width:100%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin: 0.5rem;
+
 }
 
+.title-label-form{
+    display:block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
-.nombreProducto {
-    display: none;
+.button-CTA {
+    background-color: #1259c3;
+    color: white;
 }
 
 
