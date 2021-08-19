@@ -1,289 +1,257 @@
-/* 
-Paleta de colores
-Amarillo: #EAC926;
-Azul: #03264C;
-Celeste: #1259c3;
-Gris oscuro: #666;
-Gris claro: #ebebeb;
-Verde: #39b54a; 
-*/
-
-
-
 *{
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    background-color: #ebebeb;
-    margin:0px;
-}
+
+/* ==========   HEADER    ========== */
 
 
-/* ===========   HEADER    ===========   */
-
-
-.main-header{
+.main-header {
     background-color: #EAC926;
     padding: 20px;
 }
 
-h3{
-    font-size: 24px;
-}
-
-.logo{
+.logo {
     width: 200px;
 }
 
-.navbar-right, .navbar-left{ /*   04.04.08 - Microdesafio codereview - Solo para la versión mobile, ocultar el site y el login navbar. */
-    display:none;
-    margin:10px;
+.copy-header {
+    font-weight: 400;
+    text-align: center;
 }
 
-.copy-header{
-    max-width: 350px;
-    font-weight: 400px;
-    text-align: right;
-}
-
-.barraDeBusqueda, .logo, .compra-en-cuotas{
-    margin:10px;
-}
-
-.hamburguer-button {
+.hamburguesa-button {
     background-color: #03264C;
-    color:white;
-    display:block;             /* Convierto el boton en un elemento de bloque */
-    max-width:50px;
+    color: white;
+    display: block;
+    max-width: 50px;
     padding: 15px 0;
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
-    margin:auto;             /* Como es un elemento de bloque, solo alineo el boton */
+    margin: auto;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding:5px 0;
 }
 
 .main-navbar{
-    display: none;           /* Le oculto los items a la lista ya que estos iran en el menu */
-}
-
-.main-navbar ul {   /* Al llamar a la clase + Ul, me refiero a todos los elementos de esa clase lista */
-    list-style:none;          /* Le saco las vinetas a la lista */
-    margin:0px;
-    padding: 0px;
-}
-
-.main-navbar a {  /* Al llamar a la clase + a, me refiero a todos los elementos dentro de clase lista, sin importar si es la izquierda o la derecha */
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;    /* Convierto en elementos de linea para darles padding */
-    padding: 5px 0;
-    font-size: 17px;
+    display: none;
 }
 
 
+/* ==========   BODY    ========== */
 
-/* ===========   BODY    ===========   */
 
-main{                        /*   04.04.08 - Microdesafio 1. paso 1 - centrar la sección main y que ocupe un 90% del ancho de la pantalla. */
-    width: 90vw;
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    margin: 0 auto;
+body {
+    background: #e2e1db;
+    font-family:'Roboto', sans-serif;
+}
+
+footer {
     text-align: center;
-
 }
 
-.container-productos{
-    display:flex;
-    flex-wrap:wrap;
+main {   
+    margin: auto;
+}
+
+.box-products {
+    margin-bottom : 100px;
+    padding: 20px;
+    background-color: #e2e1db;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
-/* 
-.image-product{
-    min-width: 50px;                      /* Ajusto las imagenes al tamano del contenedor
-    height: auto;
-} */
 
+.box-products img {
+    width: 100%;
+}
 
-.cards-productos{
-    margin-top:10px;                     /*   04.04.08 - Microdesafio 1. paso 2 - Entre cada artículo hay una separación de 10 píxeles.*/
+.box-descripcion {
+    width: 100%;
     background-color: white;
-    font-size: 16px;
-    /* display: inline-block; */
-    max-width: 10vw;                       /*    04.05.07 - Nuestro nuevo desafío es desarrollar la Home utilizando Flexbox, teniendo en cuenta que el sitio debe ser 100% responsive. ¿Qué debemos modificar para que, aplicando Flexbox, solo se vea un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos para la versión desktop?
-     display: block;                           04.05.07 - Adicionados parametros para cards segun ejercicio 
-        padding: 5px;
-        height: 30px;
-        width: 30px;
-        border: 1px solid #39b54a;
-        background-color: #FFF;
-        border-radius: 50%;
-        position: absolute;
-        right: 20px;
-        top: -15px; */
-}
-
-.texto-cards-productos{ /*   04.04.08 - Microdesafio 1. paso 3, 4 y 5 - logo del envío, el precio, el  porcentaje de descuento y la descripción del artículo como elementos de una caja dentro de la caja general del artículo. ● Nos piden que la misma tenga un borde superior de 1 píxel, línea sólida y color
-#ebebeb.● Debe tener separado el contenido de sus bordes en 15 píxeles en cada uno de sus lados.*/
-                        
-border-top: 1px solid #ebebeb;
-margin: 15px;
-}
-
-i{                      /* Altera el tamano de los iconos font-awesome */
-    font-size:18px;
-}
-
-.texto-cards-productos i{           /* Formato font-awesome camion*/
-    color: green;
+    margin: 0;
+    padding: 3%;
+    margin-top: 0;
+    box-sizing: border-box;
+    border-top: 1px solid #d2b8b8;
     display: flex;
-    justify-content: flex-end;
-    font-size: 25px;
+    justify-content: flex-start;   
+}
+
+ .product {
+    box-shadow: 0px 0px 5px rgb(100 100 100);
+    padding: 5px;
+    background-color: white;
+    margin: 0 8px 16px;
+    width: 320px;
     position: relative;
-    bottom: 15px;
+}
+.product h3 {
+    font-size: 15px;
+    margin:0;
 }
 
-.precio{
-    /* font-size: 18px; */
-    width: 30vw;                    /* 04.05.07 - Para cada uno de los artículos debemos:
-    ○ Lograr que el precio y el descuento de los artículos estén en el mismo renglón, donde el precio ocupa el 30% y el descuento el 70% del total del renglón.*/
-}
 
-.descuento{
-    font-size: 16px;
+.precio {
+    
+    font-size: 20px;
+    margin: 4px;
+}
+.desc {
     color:green;
-    width: 70vw;                    /* 04.05.07 - Para cada uno de los artículos debemos:
-    ○ Lograr que el precio y el descuento de los artículos estén en el mismo renglón, donde el precio ocupa el 30% y el descuento el 70% del total del renglón.*/
+    margin-left:5px;
+    margin: 8px;
+}
+.nombreProducto {
+    margin-left: 8px;
 }
 
-.precio, .descuento{               /* 04.05.07 - Para cada uno de los artículos debemos:
-    ○ Lograr que el precio y el descuento de los artículos estén en el mismo renglón, donde el precio ocupa el 30% y el descuento el 70% del total del renglón.*/
-    font-weight: bold;
+.truck-icon{
+    color:#39b54a;
     display: flex;
-    justify-content: left;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    padding:2%;
+    position: absolute;
+    background-color: white;
 }
 
-.preciodescuento{
-    display: flex;
-    justify-content: left;
-}
+/* ==========   FOOTER    ========== */
 
-.descripcion{
-    font-size: 14px;
-    /* font-weight: bold; */
-    display:none;           /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
-    padding-bottom: 40px;
+
+footer {
+    background-color: white;
+    padding: 20px;
 }
 
 
+.footer-content {
+      
+    flex: 0 30%;
+    width:100%;
+    justify-content: center;
+    
+}
 
+.footer-content .bottom-content {
+    padding: 40px;
+}
 
-/* ===========   FOOTER    ===========   */
+.footer-icon {
+font-size:25px;
+}
 
-
-footer{
+h1 {
     text-align: center;
 }
 
-
-
-
-/* ===========   RESPONSIVE    ===========   */
-
-
-@media (min-width: 361px){  /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte: ● Navegación en tablets (ancho mínimo 361 px) */
-.descripcion{
-    display: flex;
-    justify-content:left; /*   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
-}
-.cards-productos{           /*   04.04.08 - Microdesafio 2 - Agregar box-shadow. Para los dispositivos tablet o de resoluciones superiores,. */
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-.navbar-right, .navbar-left{ /*   04.04.08 - Microdesafio codereview - Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen del menú hamburguesa. */
-    list-style: none;
-    display: inline-block;    /* Convierto en elementos de linea para darles padding */
-    padding: 5px 0;
-}
-.burger-menu{                  /*   04.04.08 - Microdesafio codereview - Para las versiones desktop y tablet mostrar el site y login navbar, pero ocultar la imagen del menú hamburguesa. */
-    display:none;
-}
-
-.container-productos {
-    display:flex;
-    max-width: 50vw;                       /*    04.05.07 - Nuestro nuevo desafío es desarrollar la Home utilizando Flexbox, teniendo en cuenta que el sitio debe ser 100% responsive. ¿Qué debemos modificar para que, aplicando Flexbox, solo se vea un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos para la versión desktop? */
-}
+.nombreProducto {
+    display: none;
 }
 
 
-@media (min-width: 768px){ /* Partiendo del mobile, comienzo a configurar la version tablet */
+/* ==========   RESPONSIVE    ========== */
+
+
+@media (min-width:768px) {
     .main-header-top-bar{
-        /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
-        display: flex; /* Convierto el top bar en un container flex */
-        justify-content: space-between; /* para alinear los elementos */
-    }
-    .copy-header{
-        max-width: 300px; /* defino el ancho del contenedor copy-header */
-        text-align: right; /* para alinear los elementos copy a la izquierda */
-    }
-    .hamburguer-button{
-        display: none; /* oculto el hamburguer button */
-    }
-    .main-navbar{
-        /* border:dotted 2px red; // Este recurso es muy util para poder marcar e identificar la caja que estoy estilizando */
+        
         display: flex;
         justify-content: space-between;
     }
-    .main-navbar ul{ /* Hago que los elementos de la lista, se muestren uno del lado del otro con flex */
+
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .hamburguesa-button {
+        display: none;
+    }
+
+    .main-navbar{
         display: flex;
-    }
-    .main-navbar li{ /* Hago que los elementos li, tengan un espacio entre ellos */
-        margin: 0px 5px;
-    }
-      
-    .descripcion{ /*   04.04.08 - Microdesafio 2 - Tomando los requerimientos del equipo de usabilidad, debemos implementar los siguientes puntos de corte:● Navegación en desktop (ancho mínimo 769 px) */
-        display: flex;
-        /* justify-content:center;   04.04.08 - Microdesafio 2 - Solo en el caso mobile la descripción del artículo no se visualizará. */
-    }
-    .cards-producto {
-        display: inline-block;
-        max-width: 25vw;                       /*    04.05.07 - Nuestro nuevo desafío es desarrollar la Home utilizando Flexbox, teniendo en cuenta que el sitio debe ser 100% responsive. ¿Qué debemos modificar para que, aplicando Flexbox, solo se vea un artículo si estamos en mobile, dos artículos para tablet y cuatro artículos para la versión desktop? */
-        }
         
+        justify-content: space-between;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li{
+        margin: 0 5px;
+    }
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .nombreProducto {
+        display: block;
+    }
+  
+    .truck-icon{
+        position: absolute;
+        right: 20px;
+        bottom: 95px;
+    }
+  
 }
 
-
-
-@media(min-width: 1200px){
-    .main-header-top-bar, .main-navbar {
-        max-width: 1200px; /*limito a todos los elementos para que no crezcan mas alla de 1200 */
-        margin:auto;
+@media (min-width: 1200px){
+    .logo {
+        width: 250px;
     }
-    .main-header-top-bar{
+
+    .main-header-top-bar, .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+        
+    }
+
+    .main-header-top-bar {
         align-items: center;
+    }
+
+    .copy-header{
+        margin: 0;
+        max-width: none;
+        font-size: 18px;
+        font-weight: 400;
+        
+    }
+
+    .main-navbar {
+        margin-top: 50px;
     }
 
     .main-navbar li {
         margin: 0 10px;
     }
-    .main-navbar a {
-        font-size: 19px;
+
+    .main-navbar a{
+        font-size: 16px;
     }
-    .copy-header{
-        margin:0px;
-        max-width: none;
-        font-size: 26px;
-        font-weight: 400px;
-    }
-    .logo{
-        width: 250px;
-    }
-    .main-navbar{
-        margin-top: 40px;
-    }
+    
 }
+
+

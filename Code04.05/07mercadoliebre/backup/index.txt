@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>MercadoLiebre</title>
+
+    <!-- Adicionando Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Adicionando iconos FontAwesome -->
+    <script src="https://kit.fontawesome.com/17d45040ef.js" crossorigin="anonymous"></script>
+    
+    <!-- Vinculando la hoja de estilo -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css"> 
+
+</head>
+
+
+<body>
+    <!-- Microdesafio - Paso 2 | CODE04.02 => 11Clase -->
+    <header class="main-header"> 
+        <div class="main-header-top-bar">     
+            <img src="./images/logo-mercado-liebre.svg" class="logo" alt="Logo MercadoLiebre">
+
+        <!-- Barra de busqueda -->
+        <div class="barraDeBusqueda">
+        <input type="search" name="busquedaproductos" placeholder="Buscar productos, marcas">
+        <!-- <input type="submit" value="Buscar">  Esta linea introduce un boton de busqueda -->
+        <i class="fas fa-search"></i>
+        <br>
+        </div>
+
+        <!-- Adicionando clase Icono Font Awesome -->
+        <h2 class="copy-header">
+            <i class="fas fa-hand-holding-usd"></i>
+            Comprá en cuotas y sin tarjeta de crédito</h2>
+
+            <!-- Adicionando Boton menu burger-->      
+            <a href="#" class="hamburguer-button">
+                <i class="fas fa-bars"></i>
+            </a>
+            </div>
+            <nav class="main-navbar">
+                <ul class="left-navbar">
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+                
+                <ul class="right-navbar">
+                    <li><a href="#">Creá tu cuenta <i class="far fa-id-card"></i></a></li> <!--Pego los iconos de font-awesome -->
+                    <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ultima-visita">
+            <!-- Adicionando clases CSS -->
+            <h3>Basado en tu ultima visita</h3>
+            <section class="container-productos">
+            <article class="cards-productos">
+                <img src="./images/img-cafetera-moulinex.jpg" class="image-product" alt="Cafetera" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$6.770</p> 
+                    <p class="descuento">40% off</p> 
+                    </div>
+                    <p class="descripcion">Cafetera Moulinex</p>
+                </div> 
+            </article>
+
+            <article class="cards-productos">
+                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$230.000</p>
+                    <p class="descuento">20% off</p>
+                    </div>
+                    <p class="descripcion">MacBook Pro 2019</p>
+                </div>
+            </article>
+
+            <article class="cards-productos">
+                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$70.500</p>
+                    <p class="descuento">10% off</p>
+                    </div>
+                    <p class="descripcion">Samsung Galaxy S10</p>
+                </div>
+            </article>
+
+            <article class="cards-productos">
+                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$23.200</p>
+                    <p class="descuento">5% off</p>
+                    </div>
+                    <p class="descripcion">SmartTv Samsung 43"</p>
+                </div>
+            </article>
+            </section>
+        </section>
+
+        <section class="ofertas">
+            <h3>Seccion de Ofertas</h3>
+            <section class="container-productos">
+            <article class="cards-productos">
+                <img src="./images/img-cafetera-moulinex.jpg" alt="Cafetera" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$6.770</p>
+                    <p class="descuento">40% off</p>
+                    </div>
+                    <p class="descripcion">Cafetera Moulinex</p>
+                </div>
+            </article>
+
+            <article class="cards-productos">
+                <img src="./images/img-macbook-pro-2019.jpg" alt="MacBook" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$230.000</p>
+                    <p class="descuento">20% off</p>
+                    </div>
+                    <p class="descripcion">MacBook Pro 2019</p>
+                </div>
+            </article>
+
+            <article class="cards-productos">
+                <img src="./images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                    <div class=preciodescuento>
+                    <p class="precio">$70.500</p>
+                    <p class="descuento">10% off</p>
+                    </div>
+                    <p class="descripcion">Samsung Galaxy S10</p>
+                </div>
+            </article>
+
+            <article class="cards-productos">
+                <img src="./images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43" class="image-product" width="180px" height="180px">
+                <div class="texto-cards-productos">
+                    <i class="fas fa-truck"></i>
+                        <div class=preciodescuento>
+                        <p class="precio">$23.200</p>
+                        <p class="descuento">5% off</p>
+                        </div>
+                    <p class="descripcion">SmartTv Samsung 43"</p>
+                </div>
+            </article>
+            </section>
+        </section>    
+    </main>
+
+
+
+    <footer>           <!-- Microdesafio - Code Review - Alineando textos y add iconos-->
+        
+        <section>
+            <article>
+                <h3><i class="far fa-credit-card"></i><br>Pagá con tarjeta o en efectivo</h3>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                puntos de pago. ¡Y siempre es seguro!</p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h3><i class="fas fa-gift"></i><br>Envío gratis desde $ 2.500</h3>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                productos. Es un beneficio de Mercado Puntos.</p>
+            </article>
+        </section>
+        
+        <section>
+            <article>
+                <h3><i class="fas fa-user-shield"></i><br>Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                porque estás siempre protegid@.</p>
+            </article>
+        </section>
+        <br>
+        <section>
+            <article>
+                <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+            </article>
+        </section> 
+        
+        
+    </footer>
+</body>
+</html>
+
+
+
+
+<!-- Para llevar de local a Github pages y que no dejen de funcionar las imagenes,
+    reemplazar los siguientes terminos: 
+
+1) Copiar el codigo local (HTML y CSS) y pegarlo en Grupo01/ClaseWeb (View/HTML y Public/CSS, styles y normalize),
+2) En index.html, reemplazar "./images/" por "../public/images/"
+3) En index.html, reemplazar "./css/" por "../public/CSS/"
+4) Salvar y git push origin master
+
+"./images/img-tv-samsung-smart.jpg" Local "./css/styles.css"
+"../public/images/img-tv-samsung-smart.jpg" GitHub "../public/CSS/styles.css"
+ -->
