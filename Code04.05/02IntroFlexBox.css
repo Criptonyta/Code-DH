@@ -10,3 +10,6 @@ Las propiedades FlexBox generalmente se declaran sobre el contenedor padre
     display:flex; 
 
 }
+
+
+/* Otra opcion a FlexBox para maquetar el sitio es CSS Grid */
