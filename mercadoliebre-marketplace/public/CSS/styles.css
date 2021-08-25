@@ -1,0 +1,360 @@
+/* 
+Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+
+*/
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* ==========   HEADER    ========== */
+
+
+.main-header {
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+}
+
+.hamburguesa-button {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding:5px 0;
+}
+
+.main-navbar{
+    display: none;
+}
+
+
+/* ==========   BODY    ========== */
+
+
+body {
+    background: #e2e1db;
+    font-family:'Roboto', sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+main {   
+    margin: auto;
+}
+
+.box-products {
+    margin-bottom : 100px;
+    padding: 20px;
+    background-color: #e2e1db;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product:hover
+    .nombreProducto{
+        color:black;
+    }
+
+.box-products img {
+    width: 100%;
+}
+
+.box-products img:hover{
+    box-shadow: 0px 0px 5px rgb(100 100 100);
+}
+
+.box-descripcion {
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 3%;
+    margin-top: 0;
+    box-sizing: border-box;
+    border-top: 1px solid #d2b8b8;
+    display: flex;
+    justify-content: flex-start;   
+}
+
+ .product {
+    box-shadow: 0px 0px 5px rgb(100 100 100);
+    padding: 5px;
+    background-color: white;
+    margin: 0 8px 16px;
+    width: 320px;
+    position: relative;
+}
+.product h3 {
+    font-size: 15px;
+    margin:0;
+}
+
+
+.precio {
+    
+    font-size: 20px;
+    margin: 4px;
+}
+.desc {
+    color:green;
+    margin-left:5px;
+    margin: 8px;
+}
+.nombreProducto {
+    margin-left: 8px;
+    color:white;
+}
+
+.truck-icon{
+    color:#39b54a;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    padding:2%;
+    position: absolute;
+    background-color: white;
+}
+.truck-icon:hover{
+    transform:rotate(-90deg);
+    transition-property: transform;
+    transition-duration: 00.5s;
+}
+.truck-icon{
+    position: absolute;
+    right: 20px;
+    bottom: 95px;
+}
+
+
+/* ==========   FOOTER    ========== */
+
+
+footer {
+    background-color: white;
+    padding: 20px;
+}
+
+
+.footer-content {
+      
+    flex: 0 30%;
+    width:100%;
+    justify-content: center;
+    
+}
+
+.footer-content .bottom-content {
+    padding: 5 20px;
+}
+
+.footer-content h4{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.bottom-content{
+    margin-bottom: 40px;
+}
+
+.footer-icon {
+    font-size:28px;
+    color: #1259c3;
+}
+
+.footer-icon:hover{
+    color: #0022AA;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* ==========   REGISTRO Y LOGIN    ========== */
+
+.registro-form{
+    max-width: 60%;
+    margin: 20px auto 60px auto;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.registro-form div{
+    width: 80%;
+    margin: 15px 0px;
+    display: block;
+    align-self: auto;
+
+}
+
+.registro-form div input{
+    display: block;
+    width:80%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin: 0.5rem;
+}
+
+.registro-form div input.checkbox, .registro-form div input.radio  {
+    display: inline-block;
+    margin: auto;
+    width:20%;
+    vertical-align: middle;
+}
+
+.registro-form div label{
+    display: inline-block; 
+    border: none;
+    height: 30px;
+    margin: 0.5rem;
+    width:50%;
+}
+
+.title-label-form{
+    display:block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button-CTA {
+    background-color: #1259c3;
+    color: white;
+}
+.button-CTA:hover {
+    background-color: #0022AA;
+}
+
+
+/* ==========   RESPONSIVE    ========== */
+
+
+@media (min-width:768px) {
+    .main-header-top-bar{
+        
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .hamburguesa-button {
+        display: none;
+    }
+
+    .main-navbar{
+        display: flex;
+        
+        justify-content: space-between;
+    }
+
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li{
+        margin: 0 5px;
+    }
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .nombreProducto {
+        display: block;
+    }
+  
+    .truck-icon{
+        position: absolute;
+        right: 20px;
+        bottom: 95px;
+    }
+  
+}
+
+@media (min-width: 1200px){
+    .logo {
+        width: 250px;
+    }
+
+    .main-header-top-bar, .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+        
+    }
+
+    .main-header-top-bar {
+        align-items: center;
+    }
+
+    .copy-header{
+        margin: 0;
+        max-width: none;
+        font-size: 18px;
+        font-weight: 400;
+        
+    }
+
+    .main-navbar {
+        margin-top: 50px;
+    }
+
+    .main-navbar li {
+        margin: 0 10px;
+    }
+
+    .main-navbar a{
+        font-size: 16px;
+    }
+    
+}
+
+
