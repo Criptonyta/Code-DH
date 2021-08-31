@@ -12,11 +12,11 @@
 //ARQUITECTURA DE ARCHIVOS => En la raiz, crar la carpeta controllers donde ira un .js por cada recurso o entidad (usuarios, productos, carrito de compras, etc). Cada archivo sera un MODULO que exportaremos para luego requerirlo donde se lo necesite.
 // Luego de crear el archivo productosController.js (nombredelrecursoController.js) en esa carpeta, definimos una variable y le asignamos un objeto literal
 
-const controlador = {
-    index:      //Para mostrar el listado de productos
-    show:       //Para mostrar el detalle del producto
-    create:     //Para enviar datoss para agregar un producto
-};
+// const controlador = {
+//     index:      //Para mostrar el listado de productos
+//     show:       //Para mostrar el detalle del producto
+//     create:     //Para enviar datoss para agregar un producto
+// }
 
 // La vieja forma anterior en la que usabamos un archivo producto.js en la carpeta routes, que contenia una URL y un callback que se encargaba de manejar las peticiones (como esta en el ejemplo:)
 
@@ -27,17 +27,17 @@ router.get('/', (req,res) => {
 
 // En esta nueva forma de implementarlo (MVC), buscamos que las responsabilidades y reglas queden distribuidas en los archivos.Ahora seran los metodos de cada controlador los que recibiran los datos y enviaran la respuesta. Por ello, copiamos el callback definido en las rutas y lo traemos para dentro de la funcion
 
-const controlador = {
-    index: (req,res) => {
-        res.send('Index de producto');
-    }
-    show:  (req,res) => {
-        res.send('Detalle de producto');
-    }
-    create:   (req,res) => {
-        res.send('Agregar un producto');
-    }
-};
+// const controlador = {
+//     index: (req,res) => {
+//         res.send('Index de producto');
+//     }
+//     show:  (req,res) => {
+//         res.send('Detalle de producto');
+//     }
+//     create:   (req,res) => {
+//         res.send('Agregar un producto');
+//     }
+// };
 
 //IMPLEMENTAR EL CONTROLADOR => Hay que exportar la variable, creando la linea al final del archivo del controlador...
 
