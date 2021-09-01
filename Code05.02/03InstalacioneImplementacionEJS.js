@@ -18,4 +18,8 @@ app.set('view engine', 'ejs');
 app.set('views', './carpeta-de-vistas');   // El primer parametro es lo que queremos configurar,
                                            // el segundo, el valor de la configuracion
 // 3) CREAR LAS VISTAS que necesitemos con la extension .ejs
-// 4) RENDERIZAR las vistas
+// 4) RENDERIZAR las vistas (ver 04PrimeraVista)
+app.use(express.static('public')) // para configurar el acceso a la carpeta public (recursos estaticos)
+app.get('/', (req,res)=>{         // para renderizar (sin tener que poner la carpeta ni extension)
+    res.render('index')
+})
