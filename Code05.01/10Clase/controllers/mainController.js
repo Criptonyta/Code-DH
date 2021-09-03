@@ -1,4 +1,4 @@
-const controlador = {
+const mainController = {
     home: (req,res)=>{                     // Escribimos los metodos de cada pedido
         res.sendFile('home');
     },
@@ -6,4 +6,4 @@ const controlador = {
         res.sendFile('about');
     },
 };
-module.exports = controlador;               // Exportamos el objeto literal
+module.exports = mainController;               // Exportamos el objeto literal
