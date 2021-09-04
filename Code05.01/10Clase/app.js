@@ -12,8 +12,5 @@ app.listen(3000, () => {
 
 const router = express.Router();
 
-
-
-// app.use('/about', main);
-// app.use('/',main);
+app.use('/', routes);
     
