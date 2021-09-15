@@ -34,3 +34,26 @@ let resultadoJuntado = notas.join(' ');
 console.log(resultadoJuntado);
 
 
+
+// DIFERENCIA ENTRE [ ] Y { } PARA ARRAYS EN JAVASCRIPT
+
+// Una duda muy frecuente en el uso de Javascript es cuándo es necesario usar llaves o corchetes al trabajar con arrays.
+// Los corchetes se usan para series que poseen valores simples, mientras que las llaves son utilizadas para las series en que hay distintos objetos y propiedades con diferentes valores. Este último caso es bastante similar al sistema de PHP.
+// De todas formas debemos tener en claro que en JS por convención, las llaves definen objetos y no arrays. Veamos un par de ejemplos:
+
+// Ejemplo del uso de corchetes “[ ]”
+
+var answers = ['yes','no','maybe'];
+var names = ['David','Kristina','Charlie','Angela'];
+
+// Ejemplo del uso de llaves “{ }”
+//example - random array
+var programmer = { 'name':'David Walsh', 'url':'http://davidwalsh.name', 'girl':'Kristina'}
+
+//example - used for an object’s properties
+var Element = implement({
+getText: function(){
+return this.get('text');
+}
+});
+
