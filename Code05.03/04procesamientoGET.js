@@ -100,10 +100,10 @@ const celulares = [                                     // array del ejercicio
 ];
 
 
-const userController = {                          // creo una variable para el controlador (tipo objeto)
-    search: function (req,res) {                  // creo el metodo search      
+const userController = {                                    // creo una variable para el controlador (tipo objeto)
+    search: function (req,res) {                            // creo el metodo search      
         let loQueBuscoElUsuario = req.query.search;  
-            let userResults = []                   // creo una variable para guardar los resultados
+            let userResults = []                            // creo una variable para guardar los resultados
 
             for (let i = 0; i <celulares.precio.length; i++) {   // ejecuto la logica recorriendo
                 if (celulares[i].precio< (loQueBuscaElUsuario)) {
@@ -113,6 +113,6 @@ const userController = {                          // creo una variable para el c
             }
         }
 };
-router.get('/celulares', userController.search);      // contruyo la ruta
+router.get('/celulares', userController.search);            // contruyo la ruta
 
 
