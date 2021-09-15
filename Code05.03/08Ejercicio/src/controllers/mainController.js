@@ -7,8 +7,10 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
+
 	index: (req, res) => {
-		res.render('index')
+		const productsDataBase = require('../data/productsDataBase.json')   // Linkeo con la base de datos
+		res.render('index', {productsDataBase:productsDataBase})			// tengo la informacion de la BD en index
 		
 	},
 	search: (req, res) => {
