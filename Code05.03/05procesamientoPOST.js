@@ -1,4 +1,4 @@
-// POST => la sintaxis es la misma que para el metodo get, donde recibe 2 parametros: 1) Un string con la ruta y 2) Un callback que definira la logica a ejecutar cuando el cliente pida esa ruta. pero a diferencia de get, NO se puede enviar atraves de la url y solo se envia atraves de un formulario. La misma ruta puede ser utilizada por ambos para distintos fines. Por ejemplo:
+// POST => Para enviar/Crear un dato la sintaxis es la misma que para el metodo get, donde recibe 2 parametros: 1) Un string con la ruta y 2) Un callback que definira la logica a ejecutar cuando el cliente pida esa ruta. pero a diferencia de get, NO se puede enviar atraves de la url y solo se envia atraves de un formulario. La misma ruta puede ser utilizada por ambos para distintos fines. Por ejemplo:
 
 // en .routes/usuariosController.js
 router.get('/crear', usuariosController.crearUsuario);

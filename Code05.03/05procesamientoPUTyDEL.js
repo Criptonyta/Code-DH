@@ -1,4 +1,4 @@
-// PUT, en inglés, significa “poner”, mientras que DELETE significa “borrar”. Tal como lo indican sus nombres, con estos métodos vamos a poder enviar información de forma segura desde el cliente al servidor y modificar la información de un registro existente en la base de datos, o bien borrarlo.
+// PUT, Para reemplazar un dato existente. En inglés, significa “poner”, mientras que DELETE significa “borrar”. Tal como lo indican sus nombres, con estos métodos vamos a poder enviar información de forma segura desde el cliente al servidor y modificar la información de un registro existente en la base de datos, o bien borrarlo.
 
 // Son muy parecidos al metodo POST por lo que el request debe venir de un formulario HTML atraves del atributo METHOD, pero vamos a tener que instalar un modulo por cuestiones de compatibilidad. Tambien se usa como parametros la 1) la ruta y 2) el callback que la maneja
 

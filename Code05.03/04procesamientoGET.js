@@ -1,5 +1,5 @@
 
-// Generalmente usamos el metodo GET para retornar vistas, archivos o datos. Las rutas reciben 2 parametros: 1) Un string con la ruta y 2) Un callback que definira la logica a ejecutar cuando el cliente pida esa ruta.
+// => Para solicitar Datos. Generalmente usamos el metodo GET para retornar vistas, archivos o datos. Las rutas reciben 2 parametros: 1) Un string con la ruta y 2) Un callback que definira la logica a ejecutar cuando el cliente pida esa ruta.
 
 
 // Enrutador
