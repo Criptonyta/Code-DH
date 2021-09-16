@@ -32,7 +32,28 @@ const controller = {
 
   // Create -  Method to store
   store: (req, res) => {
-    // Do the magic
+    let Id = products[products.length - 1].id;    // de productos, traeme la posicion 9 
+    let lastId = id + 1;
+
+    products.push({
+      id: lastId,
+      name: req.body.name,
+      price: req.body.price,
+      discount: req.body.discount,
+      category: req.body.category,
+      description: req.body.description,
+    })
+
+    let jsonCopado = JSON.stringify(products);
+
+    fs.writeFile(productsFilePath, jsonCopado, function(err) {        // Para meterlo en la BD
+      if (err) {
+          console.log(err);
+      }
+  });
+  
+
+    res.redirect('products');
   },
 
   // Update - Form to edit
