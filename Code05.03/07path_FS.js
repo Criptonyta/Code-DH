@@ -1,7 +1,7 @@
 // FileSystem => Es un módulo que permite la posibilidad de leer y escribir sobre archivos existentes en nuestro servidor. Para usarlo, necesito llamarlo desde app.js
 
 const fs = require('fs');
-const { stringify } = require('querystring');
+
 
 // Algunas de sus funciones son:
 // readFileSync => Permite RECUPERAR DATOS de un archivo y poder USARLOS. 
