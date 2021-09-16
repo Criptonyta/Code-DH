@@ -1,53 +1,53 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-const productsDataBase = require('../data/productsDataBase.json');    // llamo a la base de datos
-
+const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-	// Root - Show all products
-	index: (req, res) => {
-		res.render('index.ejs');
-	},
+  // Root - Show all products
+  index: (req, res) => {
+    // Do the magic
+    res.render("products", { products });
+  },
 
-	// Detail - Detail from one product
-	detail: (req, res) => {
-		res.render('detail.ejs');
-	},
+  // Detail - Detail from one product
+  detail: (req, res) => {
+    // Do the magic
+    let IdProduct = req.params.id;
+    let result = products.find((item) => item.id == IdProduct);
+    if(result){
+      res.render("detail", { producto: result });
+    }else{
+      res.status(404).send('Sin datos')
+    }
+  },
 
-	// Create - Form to create
-	create: (req, res) => {
-		res.render('product-create-form.ejs')
-	},
-	
-	// Create -  Method to store
-	store: (req, res) => {
-		// Do the magic
-	},
+  // Create - Form to create
+  create: (req, res) => {
+    // Do the magic
+  },
 
-	// Update - Form to edit
-	edit: (req, res) => {
-	
-			let idProduct = req.params.id                        // extraigo el id del producto a editar de la BD
-			let productToEdit = productsDataBase[id];			// extraigo el producto de la BD
-			res.render('product-edit-form.ejs', {productToEdit: productToEdit});  // renderizo
-	
-	},
+  // Create -  Method to store
+  store: (req, res) => {
+    // Do the magic
+  },
 
-	// Update - Method to update
-	update: (req, res) => {
-		// Do the magic
-	},
+  // Update - Form to edit
+  edit: (req, res) => {
+    // Do the magic
+  },
+  // Update - Method to update
+  update: (req, res) => {
+    // Do the magic
+  },
 
-	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		// Do the magic
-	}
+  // Delete - Delete one product from DB
+  destroy: (req, res) => {
+    // Do the magic
+  },
 };
 
 module.exports = controller;
