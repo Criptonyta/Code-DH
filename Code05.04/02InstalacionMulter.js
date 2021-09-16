@@ -4,11 +4,10 @@
 // INSTALACION : 
                                                     // 1) npm install multer
 
-const { Router } = require('express');
-const multer = require('multer');                   // 2) Requiero la libreria en el archivo (gralmente routes)
-const path = require('path/posix');
 
-<form action='/register' method='POST'              // 3) Preparar/adaptar el formulario HTML agregando enctype
+const multer = require('multer');                   // 2) Requiero la libreria en el archivo (gralmente routes)
+
+<form action='/register' method='POST'              // 3) Preparar/adaptar el formulario HTML (vista)agregando enctype
 enctype="multipart/form-data">
 </form>
 
