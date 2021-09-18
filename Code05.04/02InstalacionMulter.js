@@ -2,25 +2,30 @@
 
 
 // INSTALACION : 
-                                                    // 1) npm install multer
+// 1) npm install multer
 
 
-const multer = require('multer');                   // 2) Requiero la libreria en el archivo (gralmente routes)
+const multer = require('multer'); // 2) Requiero la libreria en el archivo (gralmente routes)
 
-<form action='/register' method='POST'              // 3) Preparar/adaptar el formulario HTML (vista)agregando enctype
-enctype="multipart/form-data">
-</form>
+<
+form action = '/register'
+method = 'POST' // 3) Preparar/adaptar el formulario HTML (vista)agregando enctype
+enctype = "multipart/form-data" >
+    <
+    /form>
 
-const storage = multer.diskstorage({                // 4) Configuramos el disco de almacenamiento en servidor en routes
+const storage = multer.diskstorage({ // 4) Configuramos el disco de almacenamiento en servidor en routes
     destination: function (req, file, cb) {
         cb(null, 'public/images/avatars')
     },
-    filename: function (req,file,cb) {
-        cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`);
+    filename: function (req, file, cb) {
+        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
     }
 })
 
-const uploadFile = multer({storage})                // 5) Almacenamos la variable de ejecucion en routes.js
+const uploadFile = multer({
+    storage
+}) // 5) Almacenamos la variable de ejecucion en routes.js
 
-router.post('/register', uploadFile.single('avatar'),// 6) UploadFile es la variable que cree en el punto 5.
-usersController.create)
+router.post('/register', uploadFile.single('avatar'), // 6) UploadFile es la variable que cree en el punto 5.
+    usersController.create)
