@@ -1,0 +1,17 @@
+La traducción literal al castellano de la palabra constraint es: RESTRICCIÓN.
+Por ejemplo, uno de los constraint más comunes dentro de una tabla de personas es que la información almacenada en la columna de correo electrónico NO se pueda repetir.
+
+CARACTERISTICAS:
+-Si no se cumple la condicion definida de constraint, el dato no se escribe en la BD
+-No antagoniza con otros verificadores que podamos tener en la app (tanto en el front como en el backend).
+
+TIPOS:
+Unique              => Solo permite valores unicos para uno o varios campos. Ejemplo email
+
+Null / Not Null     => El valor puede o no puede quedar en blanco ni en cero
+
+Default             => Define un valor por defecto para una columna
+
+AutoIncrement       => Genera un valor unico y se autoincrementa con cada nuevo registro. Ej. User_ID
+
+Primary Key         => Deben estar presentes en todas las tablas

@@ -1,0 +1,22 @@
+Es importante asignar el tipo de dato correcto para que la BD sea mas performatica y rapida.
+
+
+1) TIPOS NUMERICOS:
+    a) Numericos sin decimales
+        .TinyInt        => 0 a 255 | Se puede usar tambien para guardar booleanos (con 0=false y true=1)
+        .SmallInt       => 0 a 65535
+        .MediumInt      => 0 a 16777215
+        .Int            => 0 a 4294967295
+        .BigInt         => 0 a enormidad
+
+    b) Numericos con decimales
+
+2) TIPO FECHA:
+    a) Date             => YYYY-MM-DD
+    b) Time             => HH:MM:SS
+    c) DateTime         => YYYY-MM-DD HH:MM:SS
+
+3) TIPO TEXTO:
+    a) CHAR (Num)       => Siempre tiene la cantidad exacta de caracteres indicada como parametro
+    b) VARCHAR (Num)    => Indica la cantidad maxima de caracteres pasada como parametro
+    c) TEXTO            => Texto libre, se usa para blogs por ejemplo

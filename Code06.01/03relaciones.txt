@@ -1,0 +1,26 @@
+Para conectarnos a una BD, necesitamos conocer el nombre de la BD, en que servidor esta, el tipo de BD, usuario y contrasena y por ultimo el puerto (no confundir puerto con IP, la IP es la direccion del edificio y el puerto es el numero de departamento. En un mismo servidor, podemos tener corriendo varios servicios y cada servicio usa su propio puerto)
+
+Modelar => significa entender la estructura que usaremos para almacenar la infomracion. Para entendenrlo usamos un diagrama relacional
+
+
+PK (Primary key) => Es un dato o conjunto de datos unico para cada fila (no puede repetirse)
+FK (Foreign key) => Una llave foránea es un grupo de una o más columnas en una tabla que referencias la llave 
+                    primaria de otra tabla.A diferencia de las llaves primarias, las llaves foráneas pueden contener duplicados y permiten valores NULL. Una tabla puede tener múltiples llaves foráneas
+Tabla relacional => Es una tabla intermedia que usamos cuando se producen relaciones de muchos a muchos. 
+                    Contienen tanto los PK como los FK     
+
+
+TIPOS DE RELACIONES:
+
+a) De uno a uno (1:1)               => un usuario solo tiene una direccion y esa direccion pertenece a solo 1
+                                       usuario. La PK es el id de usuario y la FK es la direccion_ID 
+
+b) De uno a muchos (1:M)            => un usuario puede tener varias tarjetas, una tarjeta pertenece a solo 1
+                                       usuario. la PK es el id de usuario y la FK el tarjeta_ID
+
+c) De muchos a uno (M:1)            => 
+
+d) De muchos a muchos (M:M)         => un usuario puede comprar muchos productos. Un producto puede ser comprado 
+                                    por varios clientes. En este caso, debemos crear una tabla intermedia llamada
+                                    cliente_producto, donde deberemos colocar el PK que es el id del usuario,
+                                    ademas de las FK (id de producto y id de cliente)
