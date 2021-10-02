@@ -1,4 +1,8 @@
-Para conectarnos a una BD, necesitamos conocer el nombre de la BD, en que servidor esta, el tipo de BD, usuario y contrasena y por ultimo el puerto (no confundir puerto con IP, la IP es la direccion del edificio y el puerto es el numero de departamento. En un mismo servidor, podemos tener corriendo varios servicios y cada servicio usa su propio puerto)
+DEFINICION => Una BD es un conjunto de ENTIDADES (TABLAS) compuestas por un NOMBRE (nombre de archivo en xls) y por CAMPOS (encabezados en xls). La suma de campos componen un REGISTRO (fila en xls)
+
+
+Para conectarnos a una BD, necesitamos conocer el nombre de la BD, en que servidor esta, el tipo de BD, usuario y contrasena y por ultimo el puerto (no confundir puerto con IP, la IP es la direccion del edificio y el puerto es el numero de departamento. En un mismo servidor, podemos tener corriendo varios servicios y cada servicio usa su propio puerto).
+
 
 Modelar => significa entender la estructura que usaremos para almacenar la infomracion. Para entendenrlo usamos un diagrama relacional
 
@@ -10,17 +14,18 @@ Tabla relacional => Es una tabla intermedia que usamos cuando se producen relaci
                     Contienen tanto los PK como los FK     
 
 
-TIPOS DE RELACIONES:
+TIPOS DE RELACIONES: Cardinalidad se le llama al uno o al muchos (cardinalidad uno a cardinalidad muchos por ejemplo). Determinar las carninalidades dependen de las reglas de negocio. Un diseno de cardinalidades que no contemple el cumplimiento de las reglas de negocio, va a limitar la funcionalidad y usabilidad de la BD
 
 a) De uno a uno (1:1)               => un usuario solo tiene una direccion y esa direccion pertenece a solo 1
-                                       usuario. La PK es el id de usuario y la FK es la direccion_ID 
+                                       usuario. La PK es el id de usuario y la FK es la direccion_ID . 
+                                       SE VINCULAN AMBAS TABLAS CON LA PK y EN LA TABLA DE INICIO O PRIMARIA SE LE AGREGA UNO DE LOS CAMPOS DE LA TABLA DE DESTINO COMO FK
 
 b) De uno a muchos (1:M)            => un usuario puede tener varias tarjetas, una tarjeta pertenece a solo 1
-                                       usuario. la PK es el id de usuario y la FK el tarjeta_ID
+                                       usuario. la PK es el id de usuario y la FK el tarjeta_ID. 
+                                       SE VINCULAN AMBAS TABLAS CON EL PK Y A LA TABLA SECUNDARIA SE LE AGREGA Y SE DEFINE UN FK (UN CAMPO QUE VIENE DE LA TABLA PRIMARIA)
 
-c) De muchos a uno (M:1)            => 
-
-d) De muchos a muchos (M:M)         => un usuario puede comprar muchos productos. Un producto puede ser comprado 
-                                    por varios clientes. En este caso, debemos crear una tabla intermedia llamada
+c) De muchos a muchos (M:M)         => un usuario puede comprar muchos productos. Un producto puede ser comprado 
+                                    por varios clientes. En este caso, debemos CREAR UNA TABLA INTERMEDIA llamada
                                     cliente_producto, donde deberemos colocar el PK que es el id del usuario,
                                     ademas de las FK (id de producto y id de cliente)
+                                    AMBAS TABLAS CONECTAN CON LA TABLA INTERMEDIA CON EL PK Y LA TABLA INTERMEDIA TOMA UN CAMPO DE LA TABLA PRIMARIA Y UNO DE LA TABLA SECUNDARIA PARA DEFINIRLOS COMO FK

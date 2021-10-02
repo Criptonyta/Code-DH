@@ -1,0 +1,59 @@
+1) Cuales son los tipos de relaciones?
+
+a) De uno a uno (1:1)               => un usuario solo tiene una direccion y esa direccion pertenece a solo 1
+                                       usuario. La PK es el id de usuario y la FK es la direccion_ID . 
+                                       SE VINCULAN AMBAS TABLAS CON LA PK y EN LA TABLA DE INICIO O PRIMARIA SE LE AGREGA UNO DE LOS CAMPOS DE LA TABLA DE DESTINO COMO FK
+
+                                       Ejemplos:
+                                       1) Países-Banderas
+                                       2) Ciudadano-DNI 
+                                       3) Persona-Edad 
+                                       4) Auto-Matricula 
+                                       5) Computador-IP
+
+
+b) De uno a muchos (1:M)            => un usuario puede tener varias tarjetas, una tarjeta pertenece a solo 1
+                                       usuario. la PK es el id de usuario y la FK el tarjeta_ID. 
+                                       SE VINCULAN AMBAS TABLAS CON EL PK Y A LA TABLA SECUNDARIA SE LE AGREGA Y SE DEFINE UN FK (UN CAMPO QUE VIENE DE LA TABLA PRIMARIA)
+
+                                       Ejemplos:
+                                       1) Pais de Nacimiento-Ciudadanos
+                                       2) Domicilio-Integrantes de una familia
+                                       3) Empresa-Trabajadores
+                                       4) Persona-Cuentas bancarias
+                                       5) Tienda-Productos
+
+c) De muchos a muchos (M:M)         => un usuario puede comprar muchos productos. Un producto puede ser comprado 
+                                    por varios clientes. En este caso, debemos CREAR UNA TABLA INTERMEDIA llamada
+                                    cliente_producto, donde deberemos colocar el PK que es el id del usuario,
+                                    ademas de las FK (id de producto y id de cliente)
+                                    AMBAS TABLAS CONECTAN CON LA TABLA INTERMEDIA CON EL PK Y LA TABLA INTERMEDIA TOMA UN CAMPO DE LA TABLA PRIMARIA Y UNO DE LA TABLA SECUNDARIA PARA DEFINIRLOS COMO FK
+
+                                    Ejemplos:
+                                    1) Vendedores-Articulos para la venta
+                                    2) Profesores-Cursos
+                                    3) Peliculas-Actores
+                                    4) Estudiantes-Cursos
+                                    5) Cursos-Materias
+
+
+Cardinalidad se le llama al uno o al muchos (cardinalidad uno a cardinalidad muchos por ejemplo). Determinar las carninalidades dependen de las reglas de negocio. Un diseno de cardinalidades que no contemple el cumplimiento de las reglas de negocio, va a limitar la funcionalidad y usabilidad de la BD
+
+
+2) Que es un SGDB y cuales son los mas famosos?
+SGDB => SISTEMA DE GESTION DE BASES DE DATOS. Es un programa que sirve para poder administrar las bases de datos (por ejemplo los permisos de lectura y de escritura) 
+Los mas famosos son:
+Microsoft Access (relacional)
+Microsoft SQL Server (relacional)
+MySQL (relacional)
+Oracle Database (relacional)
+OrientDB (orientado a documentos)
+CouchDB (orientado a documentos)
+Db2 de IBM (relacional)
+IMS de IBM (jerárquico)
+
+
+3) En que se diferencian las BD relacionales de las no relacionales?
+Las BD RELACIONALES se basan en la organización de la información en trozos pequeños, que se relacionan entre si mediante la relación de identificadores (alguno de los campos en comun de la BD que poseen las tablas que la componen). Son muy utiles ya que permiten escalar un proyecto, pero requiere tener claridad de su diseno y de las reglas de negocio (contexto).
+Las BD NO RELACIONALES no tienen un identificador que sirva de relación entre un conjunto de datos y otros. Son utiles cuando no tenemos un esquema exacto de lo que se va a almacenar. Un ejemplo clasico de estas son los archivos JSON
+Como mencionaba en el punto 1), un buen diseño de BD con la tecnología apropiada aporta calidad al proyecto. Dependiendo de la naturaleza de la aplicación y de sus reglas de negocio, interesa que la base de datos tenga unas características u otras.
