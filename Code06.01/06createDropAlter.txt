@@ -1,0 +1,27 @@
+La sintaxis no es tan importante porque se administra todo desde WorkBench
+
+a) CREATE TABLE => Sirve para crear una tabla desde cero, junto con sus columnas, tipos y constrains.
+
+CREATE TABLE nombre_de_la_tabla (
+    nombre_de_la_columna_1 TIPO_DE_DATO CONSTRAINT,
+    nombre_de_la_columna_2 TIPO_DE_DATO CONSTRAINT,
+)
+
+CREATE TABLE post (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100),
+    FOREIGN KEY (id_titulo) REFERENCES post(id)     => Cuando creamos una FK, aclaramos a que tabla y dato perten
+);
+
+
+b) ALTER TABLE => Permite alterar una tabla existente y opera con tres comandos: ADD, MODIFY, DROP
+
+ALTER TABLE movies
+ADD rating DECIMAL (3,1) UNSIGNED NOT NULL; (Agrega una columna, aclarando tipo de dato y constrains)
+MODIFY rating DECIMAL (4,1) UNSIGNED NOT NULL; (Modifica el decimal de la columna rating, escribo el resto igual)
+DROP rating; (Elimina la columna)
+
+
+c) DROP TABLE => Borrara toda la tabla que le especifiquemos
+
+DROP TABLE IF EXIST movies;

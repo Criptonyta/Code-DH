@@ -1,0 +1,6 @@
+FK => UNO A MUCHOS
+
+
+Es un tipo de constraint (restricción) que se le puede asignar a una columna de una tabla. Esta permite que dicha columna almacene como valor un dato particular que hace referencia al dato almacenado en una columna de otra tabla. De ahí su nombre: "foránea", pues es "extranjera".
+
+Las claves o llaves foráneas nos permiten relacionar tablas entre sí y el objetivo de esta particularidad es otorgar mayor desempeño al momento de estar buscando algún dato en particular.
