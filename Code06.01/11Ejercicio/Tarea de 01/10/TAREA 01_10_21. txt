@@ -14,7 +14,7 @@ a) De uno a uno (1:1)               => un usuario solo tiene una direccion y esa
 
 b) De uno a muchos (1:M)            => un usuario puede tener varias tarjetas, una tarjeta pertenece a solo 1
                                        usuario. la PK es el id de usuario y la FK el tarjeta_ID. 
-                                       SE VINCULAN AMBAS TABLAS CON EL PK Y A LA TABLA SECUNDARIA SE LE AGREGA Y SE DEFINE UN FK (UN CAMPO QUE VIENE DE LA TABLA PRIMARIA)
+                                       LA PK DE LA PRINCIPAL PASA COMO FK DE LA SECUNDARIA (LA TABLA QUE TENGA LA CARDINALIDAD 1 LE CEDERA SU CONSTRAIN PRIMARIO A LA TABLA QUE TENGA LA CARDINALIDAD MUCHOS Y ESTA CONSTRAIN SERA FORANEA)
 
                                        Ejemplos:
                                        1) Pais de Nacimiento-Ciudadanos
