@@ -7,12 +7,12 @@
 
 const multer = require('multer'); // 2) Requiero la libreria en el archivo (gralmente routes)
 
-<
-form action = '/register'
-method = 'POST' // 3) Preparar/adaptar el formulario HTML (vista)agregando enctype
-enctype = "multipart/form-data" >
-    <
-    /form>
+
+// form action = '/register'
+// method = 'POST'              // 3) Preparar/adaptar el formulario HTML (vista)agregando enctype
+// enctype = "multipart/form-data" >
+
+
 
 const storage = multer.diskstorage({ // 4) Configuramos el disco de almacenamiento en servidor en routes
     destination: function (req, file, cb) {
