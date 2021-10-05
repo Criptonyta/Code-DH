@@ -1,0 +1,39 @@
+
+1) INSERT => Se puede utilizar de dos formas a) para agregar datos a todas las columnas o b) para agregar datos solo en las columnas especificadas
+
+a) no hace falta especificar el nombre pero se debe respetar el orden que tengan asignadas las columnas en la tabla:
+
+INSERT INTO table_name (columna_1, columna_2, columna_3, ...)
+VALUES (valor_1, valor_2, valor_3, ...);
+
+INSERT INTO usuarios (id, nombre, apellido)
+VALUES (DEFAULT, 'Max', 'Power');              => Al usar DEFAULT como valor de Id, agrega un id autoincremental
+
+INSERT INTO usuarios
+VALUES (DEFAULT, 'Max', 'Power');
+
+b) para insertar en columnas especificas, se aclara la tabla y luego se escribe el nombre de la/s columna/s entre parentesis
+
+INSERT INTO usuarios (nombre)
+VALUES ('Santi');
+
+INSERT INTO peliculas (duracion, titulo)
+VALUES (112, 'Kill Bill')
+
+
+2) UPDATE => Modificara los registros existentes en una tabla. Siempre va acompanado del WHERE (fila que queremos editar)
+
+UPDATE nombre_tabla
+SET columna_1 = valor_1, columna_2 = valor_2, ...
+WHERE condicion;
+
+UPDATE usuarios
+SET nombre = 'Cosme', apellido = 'Fulanito'
+WHERE id = 1
+
+
+3) DELETE => Eliminara los registros de la tabla. Si quiero borar un dato puntual uso el WHERE, si no lo uso, borrara toda la BD
+
+DELETE FROM nombre_tabla WHERE condicion;
+
+DELETE FROM usuarios WHERE usuario_id = 4;

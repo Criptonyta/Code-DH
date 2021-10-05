@@ -1,0 +1,42 @@
+1) WHERE => Sirve para filtrar las consultas SELECT 
+
+SELECT nombre_columna_1, nombre_columna_2, ...
+FROM nombre_tabla
+WHERE condicion;
+
+Podriamos por ejemplo consultar de la BD Usuarios, el nombre y edad filtrando con WHERE a todos los usuarios > de 17 anos, usando operadores
+
+SELECT nombre, edad
+FROM usuarios
+WHERE edad > 17
+
+OPERADORES
+=           Igual
+>           Mayor
+>=          Mayor o igual
+<           Menor
+<=          Menor o igual
+<>          Diferente a
+!=          Diferente a 
+ISNULL      Es nulo
+BETWEEN     Entre dos valores
+IN          Lista de valores
+LIKE        Es parecido, se ajusta a
+
+SELECT *
+FROM movies
+WHERE title LIKE 'Avatar';
+
+
+2) ORDER BY => Ordena los resultados de la consulta segun la columna especificada. Por defecto ordena ascendente (ASC) y sino puedo establecer en la consulta que sea orden descendente (DESC)
+
+SELECT nombre_columna_1, nombre_columna_2, ...
+FROM nombre_tabla
+WHERE condicion
+ORDER BY nombre_columna_1;
+
+SELECT nombre, edad
+FROM usuarios
+WHERE edad > 21
+ORDER BY nombre DESC;
+

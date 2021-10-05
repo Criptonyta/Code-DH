@@ -1,0 +1,9 @@
+Todas las consultas inician con la palabra SELECT y buscara en una (usando FROM seguido del nombre de la tabla) o varias columnas 
+
+
+SELECT nombre_columna, nombre_columna, nombre_columna, ...
+FROM nombre_tabla;
+
+SELECT titulo, rating
+FROM peliculas;
+

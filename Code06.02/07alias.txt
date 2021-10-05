@@ -1,0 +1,20 @@
+ALIAS => Se usa para darle un nombre mas amigable a las tablas, columnas y funciones. Solo sirven para la consulta en curso. Su sintaxis es AS columna_a_renombrar
+
+
+SELECT nombre_columna1 AS alias_columna1
+FROM nombre_tabla
+
+- Asignar un alias a una columna:
+
+SELECT razon_social_cliente AS nombre       => Le asigno un alias a la columna
+FROM cliente                                => Elijo la tabla cliente 
+WHERE nombre LIKE 'a%';                     => Filtro los registros que empiecen con la letra A 
+
+- Asignar un alias a una tabla:
+
+SELECT nombre, apellido, edad                       => Selecciono las columnas 
+FROM alumnos_comision_inicial AS 'Los alumnos'      => Asigno el alias que como tiene espacio, va entre comillas
+
+
+
+

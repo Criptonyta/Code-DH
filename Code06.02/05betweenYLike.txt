@@ -1,0 +1,24 @@
+BETWEEN => para obtener valores entre un rango
+                - Incluye los extremos (es decir, es equivalente a <= >=)
+                - Funciona con numeros, textos y fechas
+                - Se usa como un filtro de un WHERE
+
+SELECT nombre, edad
+FROM alumnos
+WHERE edad BETWEEN 6 AND 12;
+
+
+LIKE => Cuando buscamos algo con WHERE, podemos usar comodines para reemplazar un caracter o varios.
+Comodines:
+% = reemplaza uno o varios caracteres
+_ = reemplaza solo un caracter
+
+SELECT nombre
+FROM usuarios
+WHERE edad LIKE '_a%'           => Devuelve aquellos nombres que tengan la a como segundo caracter
+
+SELECT nombre
+FROM usuarios
+WHERE direccion LIKE '%Monroe%' => Devuelve usuariosque incluyan la calle Monroe
+
+

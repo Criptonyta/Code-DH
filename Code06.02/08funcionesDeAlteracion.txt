@@ -1,0 +1,37 @@
+FUNCIONES DE ALTERACION = > Se usa para realizar operaciones especiales con los resultados. Por ejemplo: unificar los datos de dos columnas en una sola o quizás poner algún valor por defecto a todos aquellos registros que están almacenando un valor nulo. 
+Las modificaciones nunca alterarán los datos originalmente almacenados en la base.
+
+Las funciones de alteración más comunes son:
+
+1) Concat       => Para concatenar 2 o mas expresiones
+SELECT CONCAT ('Hola ', 'a ', 'todos');                 => Hola a todos
+SELECT CONCAT ('Nombre: ', first_name, ' ',last_name)   => Nombre: Emilia Clarke
+FROM actors;
+
+2) Coalesce     => Para obtener la primera expresion que no sea NULL
+SELECT COALESCE( NULL, 1, 20, 'Digital House')          => 1
+SELECT COALESCE(NULL, NULL, Digital House)              => Digital House
+
+3) Datediff     => Para obtener la diferencia en dias entre fechas
+SELECT DATEDIFF('2017/08/25', '2017/08/15')             => 10
+
+4) Extract      => Para extraer partes de una fecha. Sirve para  second, minute, hour, day, week, month, year
+SELECT EXTRACT(HOUR FROM '2014-02-13 08:44:21')         => 8
+
+5) Replace      => Reemplaza una secuencia de caracteres por otra en un string
+SELECT REPLACE('123 123', '2', '5')                     => 153 153
+
+6) Date format  => Para darle formato a una fecha (hay mas formatos posibles)
+SELECT DATE_FORMAT('2017-06-15', '%W %M %e %Y')         => Thursday June 15 2017 
+
+7) Case         => Sirve para evaluar condiciones y devolver la primera que se cumpla. 
+SELECT id, title, rating
+CASE 
+    WHEN rating < 4 THEN 'Mala'
+    WHEN rating < 6 THEN 'Regular'
+    WHEN rating < 8 THEN 'Buena'
+    WHEN rating < 9.5 THEN 'Muy Buena'
+    ELSE 'Excelente'
+END AS rating-categories
+FROM movies
+ORDER BY rating

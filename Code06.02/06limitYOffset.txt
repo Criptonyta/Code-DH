@@ -1,0 +1,23 @@
+1) LIMIT => Su funcionalidad es limitar la cantidad de registros que devuelve el SELECT asi como limitar la cantidad de registros a eliminar con DELETE
+
+SELECT nombre_columna1, nombre_columna2, nombre_columna3
+FROM nombre_tabla
+LIMIT cantidad_de_registros;
+
+SELECT *
+FROM peliculas
+WHERE premios > 4
+LIMIT 10;
+
+
+
+2) OFFSET => Permite especificar a partir de que fila queremos comenzar con la recuperacion de los registros solicitados
+
+SELECT id, nombre, apellido
+FROM alumnos
+LIMIT 20                    => Limita los resultados obtenidos a 20 maximo
+OFFSET 20;                  => Comienza a leer los resultados desde el registro 21
+
+
+
+
