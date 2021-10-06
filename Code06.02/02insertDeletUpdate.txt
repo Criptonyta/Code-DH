@@ -9,8 +9,6 @@ VALUES (valor_1, valor_2, valor_3, ...);
 INSERT INTO usuarios (id, nombre, apellido)
 VALUES (DEFAULT, 'Max', 'Power');              => Al usar DEFAULT como valor de Id, agrega un id autoincremental
 
-INSERT INTO usuarios
-VALUES (DEFAULT, 'Max', 'Power');
 
 b) para insertar en columnas especificas, se aclara la tabla y luego se escribe el nombre de la/s columna/s entre parentesis
 
