@@ -9,12 +9,13 @@ Es importante asignar el tipo de dato correcto para que la BD sea mas performati
         .Int            => 0 a 4294967295
         .BigInt         => 0 a enormidad
 
-    b) Numericos con decimales
+    b) . Float          => Numericos con decimales
 
 2) TIPO FECHA:
     a) Date             => YYYY-MM-DD
     b) Time             => HH:MM:SS
     c) DateTime         => YYYY-MM-DD HH:MM:SS
+    d) TimeStamp
 
 3) TIPO TEXTO:
     a) CHAR (Num)       => Siempre tiene la cantidad exacta de caracteres indicada como parametro
