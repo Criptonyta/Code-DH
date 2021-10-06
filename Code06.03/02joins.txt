@@ -1,0 +1,22 @@
+JOINS => Sirven para unir los resultados obtenidos de consultas a distintas tablas. Son flexibles, su sintaxis es muy utilizada y tienen mejor performance.
+La sintaxis del JOIN no requiere la palabra WHERE sino que usa ON
+
+TIPOS:
+
+a) INNER JOIN => Hara una cruza entre dos tablas. Si alguna d elas dos tablas no tiene valor, no lo trae.
+
+SELECT clientes.id AS id, clientes.nombre, ventas.fecha
+FROM clientes                               <= Hasta el momento, ventas podia incluirse en el FROM con una coma
+INNER JOIN ventas
+
+Si bien lo citado arriba sirve para cruzar las tablas, falta aclarar en donde se producira ese cruce (es decir cual es el PK de la tabla primaria y el FK de la tabla secundaria). Usamos el ON para indicar cuales son las llaves que permitiran el cruce
+
+SELECT clientes.id AS id, clientes.nombre, ventas.fecha
+FROM clientes                          
+INNER JOIN ventas
+ON clientes.id = ventas.cliente_id        <= El ON sirve para indicar cual es la PK y la FK
+
+
+b) LEFT JOIN & RIGHT JOIN => No excluyen los resultados de ninguna de las dos tablas
+
+
