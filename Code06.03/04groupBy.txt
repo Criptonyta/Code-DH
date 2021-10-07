@@ -1,0 +1,23 @@
+GROUP BY => Se usa para agrupar los registros de la tabla resultante por una o mas columnas. Se pueden usar junto con funciones de agregacion tipo COUNT(*), SUM (*). De esa forma, contara o sumara todos los registros que se encuentran agrupados en ese rotulo.
+
+SELECT columna_1
+FROM nombre_tabla
+WHERE condition
+GROUP BY columna_1;
+
+SELECT marca, COUNT(*)
+FROM autos
+GROUP BY marca;
+
+SELECT generos.nombre, COUNT(canciones.nombre)
+FROM generos
+INNER JOIN canciones
+ON generos.id = canciones.id_genero
+GROUP BY generos.nombre;
+
+
+Al agruparse la informacion, perdemos el detalle de cada una de las filas. Ejemplo:
+
+SELECT marca, MAX(precio)
+FROM autos
+GROUP BY marca;

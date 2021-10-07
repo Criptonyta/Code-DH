@@ -1,0 +1,13 @@
+HAVING => Cumple la misma funcion que el WHERE (filtrar), pero se puede usar junto con funciones de agregacion para filtrar datos agregados
+
+SELECT columna
+FROM tabla
+WHERE condicion
+GROUP BY columna
+HAVING condicion
+ORDER BY columna
+
+SELECT COUNT(cliente_id), pais 
+FROM clientes
+GROUP BY pais
+HAVING COUNT(cliente_id) > 3

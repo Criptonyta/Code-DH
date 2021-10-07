@@ -1,0 +1,24 @@
+FUNCIONES DE AGREGACION => Realizan calculos sobre un conjunto de datos y devuelven un unico resultado, ignorando siempre los valores NULL.
+Las funciones de agregación más comunes y con las que trabajaremos en este video serán:
+
+a) COUNT                   => Devuelve siempre la cantidad de registros que cumplen con los criterios
+
+SELECT COUNT (id) AS total
+FROM movies
+WHERE genre_id = 3;
+
+b) AVG, SUM                => Devolvera el promedio/suma de los valores numericos de columnas 
+
+SELECT AVG (rating)     -- Devuelve el promedio de rating de las peliculas de la tabla movies
+FROM movies;
+
+SELECT SUM(length)      -- Devuelve la suma de la duracion de las peliculas de la tabla movies
+FROM movies;
+
+c) MIN, MAX                 => Devolvera el valor minimo y maximo de los valores numericos de la columna
+
+SELECT MIN (rating)
+FROM movies
+
+SELECT MAX (rating)
+FROM movies;

@@ -1,0 +1,5 @@
+DISTINCTS => Devuelve valores unicos de una tabla
+
+SELECT DISTINCT columna_1, columna_2
+FROM nombre_tabla;
+
