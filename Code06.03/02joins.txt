@@ -17,6 +17,28 @@ INNER JOIN ventas
 ON clientes.id = ventas.cliente_id        <= El ON sirve para indicar cual es la PK y la FK
 
 
-b) LEFT JOIN & RIGHT JOIN => No excluyen los resultados de ninguna de las dos tablas
+Si preciso cruzar muchas tablas en la misma consulta:
+
+SELECT clientes.id AS id, clientes.nombre, ventas.fecha
+FROM clientes                          
+INNER JOIN ventas
+ON clientes.id = ventas.cliente_id
+INNER JOIN productos
+ON productos.id = ventas.producto.id        
 
 
+
+
+
+b) LEFT JOIN & RIGHT JOIN => No excluyen los resultados de ninguna de las dos tablas. LEFT incluira todos los registros de la primera tabla incluso cuando no exista coincidencia con la otra. RIGHT incluira todos los registros de la tabla de la derecha
+
+SELECT clientes.id AS id, clientes.nombre, ventas.fecha
+FROM clientes                          
+LEFT JOIN ventas                          <= LEFT JOIN Trae todos los registros aunque no existan coincidencias
+ON clientes.id = ventas.cliente_id        
+
+
+SELECT clientes.id AS id, clientes.nombre, ventas.fecha
+FROM clientes                          
+RIGHT JOIN ventas                          <= LEFT JOIN Trae todos los registros aunque no existan coincidencias
+ON clientes.id = ventas.cliente_id     
