@@ -1,0 +1,10 @@
+SQL => STRUCTURE QUERY LANGUAGE. No es un lenguaje de programacion en si, sino que es un standart para el desarrollo de base de datos relacionales (son altamente escalables y requieren de un server para correr a diferencia de las no relacionales como MongoDB, Firebase, Dynamo). Dentro de una SGDB (MySQL, Oracle, MariaDB,SQL Server) con SQL como estandart, usan:
+
+a) DDL => DATA DEFINITION LANGUAGE => Son los que definen la estructura de nuestras tablas y BD en general
+Create (incluye la definicion de PK y FK), Alter, Drop, Replace, etc
+
+b) DML => DATA MANIPULATION LANGUAGE => Son todos los que definen como se manipularan los datos
+Insert, Like, Contate, etc
+
+
+MySQL Workbench es un SGBD de los mas famosos, con interfase grafica que sirve para visualizar las bases de datos
