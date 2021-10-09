@@ -22,3 +22,7 @@ FROM movies
 
 SELECT MAX (rating)
 FROM movies;
+
+
+
+

@@ -11,3 +11,8 @@ SELECT COUNT(cliente_id), pais
 FROM clientes
 GROUP BY pais
 HAVING COUNT(cliente_id) > 3
+
+
+Siempre que usamos funciones de agregacion, es conveniente agrupar y usar having
+
+SELECT  nombre,count(*) FROM PERSONAJES.Personas group by nombre having count(*)>1
