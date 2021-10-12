@@ -4,3 +4,24 @@ FK => UNO A MUCHOS
 Es un tipo de constraint (restricción) que se le puede asignar a una columna de una tabla. Esta permite que dicha columna almacene como valor un dato particular que hace referencia al dato almacenado en una columna de otra tabla. De ahí su nombre: "foránea", pues es "extranjera".
 
 Las claves o llaves foráneas nos permiten relacionar tablas entre sí y el objetivo de esta particularidad es otorgar mayor desempeño al momento de estar buscando algún dato en particular.
+
+
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    user_id INT PRIMARY KEY auto_increment not null unique,
+    nombre_apellido VARCHAR(100) not null,
+    email not null VARCHAR(50) unique
+);
+
+
+CREATE TABLE IF NOT EXISTS notas (
+    note_id             INT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
+    note_title          VARCHAR (100),
+    note_content        TEXT,
+    blocked_note        TINYINT NOT NULL,
+    creation_date       TIMESTAMP NOT NULL,
+    mod_date            TIMESTAMP NOT NULL,
+    del_date            TIMESTAMP NOT null,
+    id_user             INT NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES usuarios(user_id)
+);
