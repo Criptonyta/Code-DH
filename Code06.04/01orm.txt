@@ -1,0 +1,2 @@
+ORM => Object Relational Mapping. Es una herramienta de programación que permite "transformar" las tablas de una BD en una serie de entidades que simplifiquen las tareas básicas de acceso a los datos. 
+Estas entidades al momento de ser recibidas en nuestros programas tiene un formato de objeto literal (de ahí su nombre).
