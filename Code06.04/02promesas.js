@@ -1,7 +1,33 @@
-// PROMESAS => Regularmente en los lenguajes de programación —cuando se envía a ejecutar algún código—, el programa no continúa la secuencia sino hasta que el código enviado a ejecutar no culmine y dé alguna respuesta. En ese sentido, es bueno saber que JavaScript nos brinda la posibilidad de modificar dicho funcionamiento. Es decir, aunque se mande a ejecutar algún código, el programa puede continuar ejecutando otros procesos. Esto recibe el nombre de: Promesas, situaciones que no sabemos en qué momento serán cumplidas.
-// Son funciones que permiten ejecutar codigo asincronico. El asincronismo son las instrucciones que se ejecutan por medio de un mecanismo especifico (por ej un callback, promesa o evento) para que la respuesta sea procesada en otro momento, sin que se bloquee el programa (el pedido se ejecuta en paralelo con el resto del codigo)
+// ------ Segun video ------ .then() == luego
+// En la raiz del proyecto, creo el archivo promesas.js 
 
-/*
+// Llamo al archivo funciones donde tendre que parametrizar el comportamiento de las funciones asincronicas
+let funcionesAsync = require('./funciones.js');
+
+// de funcionesAsync, traigo la funcion obtenerDatos
+funcionesAsync.obtenerDatos()
+    // como todas las consultas a la BD son asincronicas, debo configurar un then y su funcion para que la consulta no bloquee el programa. Solo voy a poder trabajar con la variable resultado adentro del .then(). Podria pedirle filtrar todos los mayores de edad en ese resultado (siempre habiendo configurado el metodo filtrarMayoresDeEdad antes)
+    .then(function (resultado) {
+        return funcionesAsync.filtrarMayoresDeEdad(resultado)
+    })
+    // el resultado que retorna el then anterior es lo que ingresa en el segundo then y sera tratado por este para imprimir los resultados filtrados
+    .then(function (filtrados) {
+        console.log(filtrados);
+    })
+    // Caso algo falle en la ejecucion de los then, identifico ese problema atraves de un catch para imprimir que esta dando error (es siempre buena practica colocar un chatch al final de una cadena de thens)
+    .catch(function (error) {
+        console.log(error);
+    })
+
+
+
+
+/* ------ Segun apunte ------
+
+PROMESAS => Regularmente en los lenguajes de programación —cuando se envía a ejecutar algún código—, el programa no continúa la secuencia sino hasta que el código enviado a ejecutar no culmine y dé alguna respuesta. En ese sentido, es bueno saber que JavaScript nos brinda la posibilidad de modificar dicho funcionamiento. Es decir, aunque se mande a ejecutar algún código, el programa puede continuar ejecutando otros procesos. Esto recibe el nombre de: Promesas, situaciones que no sabemos en qué momento serán cumplidas.
+Son funciones que permiten ejecutar codigo asincronico. El asincronismo son las instrucciones que se ejecutan por medio de un mecanismo especifico (por ej un callback, promesa o evento) para que la respuesta sea procesada en otro momento, sin que se bloquee el programa (el pedido se ejecuta en paralelo con el resto del codigo)
+
+
 .then()   =>  devolvera un resultado o no, mientras el codigo se sigue ejecutando
 
 
