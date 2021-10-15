@@ -1,2 +1,7 @@
-ORM => Object Relational Mapping. Es una herramienta de programación que permite "transformar" las tablas de una BD en una serie de entidades que simplifiquen las tareas básicas de acceso a los datos. 
+ORM => Object Relational Mapping. 
+
+Un ORM es un modelo de programación que permite mapear las estructuras de una base de datos relacional (SQL Server, Oracle, MySQL, etc.), en adelante RDBMS (Relational Database Management System), sobre una estructura lógica de entidades con el objeto de simplificar y acelerar el desarrollo de nuestras aplicaciones.
+
+
+Es una herramienta de programación que permite "transformar" las tablas de una BD en una serie de entidades que simplifiquen las tareas básicas de acceso a los datos. 
 Estas entidades al momento de ser recibidas en nuestros programas tiene un formato de objeto literal (de ahí su nombre).
