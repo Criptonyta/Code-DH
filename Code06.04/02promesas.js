@@ -80,5 +80,21 @@ console.log(resultadoPeliculas, resultadoGeneros);
 })
 
 
+/* ------ Segun clase 15/10 ------
 
+ TRY CATCH => Es otra forma de tratar las promesas. Intenta hacer algo y si no lo consigue va por otro camino. Cuando se convina con AWAIT (que funciona como un if), podemos setear el tiempo de espera del metodo. La ventaja de este metodo es que si falla, no se para el codigo.
+
+
+const AlumnoModel
+
+getAlumno: async() => {
+try {
+    const response = await db.alumno.findAll()
+    return response
+} catch (error) {
+    console.log(`Fallo de consulta a la BD ${error.message}`);
+    return [];
+},
+},
+}
 */
