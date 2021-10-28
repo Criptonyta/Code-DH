@@ -1,0 +1,5 @@
+API => Aplication Programming Interfase.
+Basicamente devuelve informacion para que otra aplicacion la consuma. Son desarroladas para que dos aplicaciones puedan comunicarse. Cada API tiene su propia documentacion.
+Hay APIS publicas, privadas y semipublicas.
+
+ENDPOINT => HAce referencia al punto de conexion (URL) a la que debo apuntar para obtener la informacion que preciso.

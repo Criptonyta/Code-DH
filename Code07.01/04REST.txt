@@ -1,0 +1,9 @@
+API REST => es un sistema a través del cual un front-end se puede comunicar con un back-end de una manera mucho más organizada y funcional. Siempre pensando en la optimización y velocidad del sistema, así como también en la facilidad de uso del mismo.
+
+SISTEMA REST => busca implementar un esquema o protocolo que le permita a todos los sistemas que se comunican con él entender en qué forma lo tienen que hacer y bajo qué estructura deberán enviar sus peticiones para que sean atendidas. Sus 4 CARACTERISTICAS son:
+
+1) Separar un sistema web en dos: el front-end (Interfase de usuario de la app) y el backend (agrupando todos los servicios que la app consume). La ventaja de ello es que si quiero agregar nuevos servicios, no necesariamente necesito modificar la Interfase.
+Es decir, hay URLs que se encargan de mostrar la interfase y otras URLS que se ocupan de proveer la informacion, ambas estan conectadas por medio de las APIs
+
+2) Ubicacion de los recursos: 
+
