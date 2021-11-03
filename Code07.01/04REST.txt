@@ -1,3 +1,7 @@
+
+RESUMEN DEL VIDEO
+
+
 API REST => es un sistema a través del cual un front-end se puede comunicar con un back-end de una manera mucho más organizada y funcional. Siempre pensando en la optimización y velocidad del sistema, así como también en la facilidad de uso del mismo.
 
 SISTEMA REST => busca implementar un esquema o protocolo que le permita a todos los sistemas que se comunican con él entender en qué forma lo tienen que hacer y bajo qué estructura deberán enviar sus peticiones para que sean atendidas. Sus 4 CARACTERISTICAS son:
@@ -5,5 +9,47 @@ SISTEMA REST => busca implementar un esquema o protocolo que le permita a todos 
 1) Separar un sistema web en dos: el front-end (Interfase de usuario de la app) y el backend (agrupando todos los servicios que la app consume). La ventaja de ello es que si quiero agregar nuevos servicios, no necesariamente necesito modificar la Interfase.
 Es decir, hay URLs que se encargan de mostrar la interfase y otras URLS que se ocupan de proveer la informacion, ambas estan conectadas por medio de las APIs
 
-2) Ubicacion de los recursos: 
+2) Ubicacion de los recursos: referido a que deberia haber solo una ruta para acceder a determinado recurso (ej, cuando busco canciones o top canciones, la ruta deberia ser /canciones)
+
+3) Statteless (sin estado): significa que el servidor no guarda ninguna informacion sobre los pedidos realizados (ej, el login) por lo que si quiero realizar otra peticion, deberia tambien enviar esos datos
+
+4) cacheable: significa que el cliente deberia poder recordar parte de las peticiones para evitarle esa carga al servidor.Para setearlo, el servidor debe responder con un encabezado especificando el paramentro max-age (cuyo valor es la cantidad de segundos que tiene de validez ese recurso).
+
+Como ve el cliente un servicio REST?
+Todos los recursos de nuestra aplicacion deben estar organizados por un sustantivo (Ej, albumes, artistas, canciones), en definitiva, un recurso es todo aquello que sea util para el cliente. Un recurso es siempre identificado con datos y metadatos que lo relacionan con otros recursos de la app. Todos los recursos son accesados atraves de urls. 
+
+Como hace el cliente para compartir recursos con el servidor y viceversa?
+
+1) JSON => Pueden compartir informacion atraves de un archivo JSON pero con la particularidad de que debe poseer una cabecera, indicando cual es el contenido:
+Content-Type: application/json
+2) RAW => Son datos que se envian como texto sin ningun formato en particular y por ello no es muy utilizado
+3) TEXT => Para enviar textos u otros archivos que no sean JSON (ejemplo un HTML o un CSS)
+4) URL-Encoded => Nos envia algo muy similar a un querystring (ej, email%3Dcosme%40Fulanito.fox)
+
+Que otras funcionalidades cumple un servicio REST?
+HEAD => Supongamos que un cliente consulta los generos musicales atraves de la URL /genero, guardando localmente los datos, pero luego este quiere saber si los datos fueron modificados desde la ultima vez que hizo la peticion. Para ello, existe la implementacion del metodo HEAD. HEAD es un metodo HTTP que en REST se utiliza para conocer la fecha de la ultima modificacion del recurso. Es decir, en lugar de pedir el recurso por GET, lo puedo pedir por HEAD, siendo que su objetivo no es devolver datos, solo devolvera la fecha de modificacion. Si el recurso fue modificado, entonces debera ejecutarse otra peticion por GET para conseguir los datos actualizados
+
+Existen otras funcionalidades que pueden ser consultadas directamente en la documentacion.
+
+
+
+RESUMEN MANTERIAL COMPLEMENTAR:
+
+REST => Es una arquitectura cliente servidor para poder integrarse con cualquier otra plataforma (tanto en el cliente como en el servidor).
+
+RECURSOS UNIFORMES =>   a) Todos los recursos del servidor tienen un nombre en forma de URL o hipervinculo
+                        ( llamados endpoints), que son exibidos por el servidor para que los clienttes puedan acceder. Se llama API al conjunto de endpoints. Ejemplo:
+                            /productos  => /productos/crear
+                                        => /productos/editar
+                                        => /productos/listar
+                        b) Toda la informacion se intercambia usando el protocolo HTTP
+
+STATTELESS => REST propone que todas las interacciones entre cliente y servidor deben ser tratadas como nuevas y de forma independiente sin guardar el estado (ej, en el caso de usuarios logados o no, debemos enviar toda la informacion de autenticacion necesaria en cada peticion)
+
+CACHEABLE => Es una herramienta que se implementa del lado del cliente para ahorrar peticiones al servidor y ser mas performante
+
+FORMATOS => Cuando el servidor envia una solicitud, transfiere una representacion del estado del recurso solicitado. Esta informacion entregada, se envia en varios formatos posibles siendo JSON el mas popular.
+
+
+
 

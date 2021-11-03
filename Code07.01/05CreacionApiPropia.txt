@@ -1,0 +1,38 @@
+Pasos:
+
+1) IDENTIFICAR LOS OBJETOS COMO RECURSOS => Recordar que los recursos siempre llevan nombre de sustantivos. 
+
+2) CREAR LOS IDENTIFICADORES DE ESTOS RECURSOS => Es decir, definir cuales seran las URLs o endpoints vinculados a cada recursos. Se llama COLECCIONES al conjunto de recursos (se lo debe escribir en plural).
+Si lo que quiero obtener no es TODA la informacion de TODO el recurso, lo que se usa es colocar un identificador al final del endpoint (URL) por ejemplo el Id. = Ej, /productos/albumes/3.
+Esa informacion, tambien puede combinarse, si por ejemplo, ademas del album 3 quiero obtener informacion del artista, en ese caso la URL quedaria asi : /artistas/2/albumes
+
+3) DEFINIR QUE DEVOLVERA EL ENDPOINT => Por lo general, la informacion devuelta sigue los siguientes criterios:
+    a) Devuelve un JSON
+    b) En el encabezado posee un link al endpoint (ej, "link": "http://domain.com/api/genres)
+    c) En el encabezado, entrega informacion generica como la cantidad de items que devuelve la consulta
+    d) La respuesta a la consulta (los datos), es decir, infromacion especifica del recurso
+
+    {
+        "link": "http://domain.com/api/genres",
+        "total_items": 5,
+        "data": [
+            {"id": 1, "name": "Rock", "link": "http://domain.com/api/genres/1"},
+            {"id": 2, "name": "Pop", "link": "http://domain.com/api/genres/2"},
+            {"id": 3, "name": "Clasica", "link": "http://domain.com/api/genres/3"},
+            {"id": 4, "name": "Jazz", "link": "http://domain.com/api/genres/4"}
+        ]
+    }
+
+4) ASOCIAR A LOS ENDPOINTS CON LOS METODOS HTTP (GET (pedir), POST(Subir), PUT y PATCH(Actualizar) y DELETE)=> Esto significa que para cada ruta a cada recurso, esa ruta tendra 5 operaciones asociadas. Ej:
+/generos
+a) GET /generos => Este endpoint deberia devolver informacion de los generos. Devuelve un status 200+el JSON
+b) POST /generos => Este va a permitir agregar un genero nuevo. Devuelve status 201+un JSON con el id de lo que se creo.
+c) PUT /generos => Lo utilizamos para reemplazar un recurso ya existente. Se usa para "poner en el lugar de". Devuelve 201 o 200 o 204
+d) PATCH /generos => Usado para actualizar parcialmente un dato existente
+e) DELETE /generos => Para indicar que borre un recurso (no se aplica a colecciones completas). Si fue exitoso devuelve status 200
+
+CODIGO DESDE EL MINUTO 7,30 DEL VIDEO
+
+
+
+
