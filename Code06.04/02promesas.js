@@ -97,4 +97,9 @@ try {
 },
 },
 }
+
+Una funcion async  devuelve SIEMPRE una promesa
+
+
+
 */
