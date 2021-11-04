@@ -1,13 +1,13 @@
 // Para hacer las modificaciones en el DOM, siempre hay que seleccionar primero el objeto que quiero modificar 
 
 
-// .innerHTML => Si queremos leer o modificar el contenido de una etiqueta HTML
+// .innerHTML => Si queremos leer o modificar el contenido de una etiqueta HTML, creando un nodo en HTML
 
 const nombre = document.querySelector('div.nombre').innerHTML // permite leer la etiqueta
 const nombre = document.querySelector('div.nombre').innerHTML = 'Dario' // reemplaza/pisa el valor de la etiqueta
 const nombre = document.querySelector('div.nombre').innerHTML += 'Dario' // adiciona el valor sin perder lo anterior
 
-// .innerText => Si queremos leer o modificar el texto de una etiqueta HTML
+// .innerText => Si queremos leer o modificar el texto de una etiqueta HTML. Solo edita/agrega texto, no crea un nodo
 
 const nombre = document.querySelector('div.nombre').innerText // retorna el contenido de div.nombre en string
 const nombre = document.querySelector('div.nombre').innerText = 'Maria' //reemplaza/pisa todo el texto de div.nomb
