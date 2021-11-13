@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql8-17d02e4b3ce-16941499c81ffd08" provider="mysql" driver="mysql8" name="localhost" save-password="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="" url="jdbc:mysql://localhost:3306/" user="root" home="C:\Program Files\MySQL\MySQL Router 8.0" type="dev">
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="jumpServer0.authType" value="PASSWORD"/>
+				<property name="remoteHost" value=""/>
+				<property name="keyPath" value=""/>
+				<property name="implementation" value="jsch"/>
+				<property name="jumpServer0.keyPath" value=""/>
+				<property name="jumpServer0.port" value="22"/>
+				<property name="port" value="22"/>
+				<property name="jumpServer0.host" value=""/>
+				<property name="jumpServer0.enabled" value="false"/>
+				<property name="localHost" value=""/>
+				<property name="host" value=""/>
+				<property name="jumpServer0.name" value=""/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-host" value=""/>
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="true">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.client.cert" value=""/>
+				<property name="ssl.client.key" value=""/>
+				<property name="ssl.ca.cert" value=""/>
+				<property name="ssl.method" value="CERTIFICATES"/>
+				<property name="ssl.cipher.suites" value=""/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<data-source id="mysql8-17d02e5d16e-1a739ebe40a7fd86" provider="mysql" driver="mysql8" name="localhost 2" save-password="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="" url="jdbc:mysql://localhost:3306/" user="root" home="C:\Program Files\MySQL\MySQL Router 8.0" type="dev">
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="true">
+				<property name="jumpServer0.authType" value="PASSWORD"/>
+				<property name="remoteHost" value=""/>
+				<property name="keyPath" value=""/>
+				<property name="implementation" value="jsch"/>
+				<property name="jumpServer0.keyPath" value=""/>
+				<property name="jumpServer0.port" value="22"/>
+				<property name="port" value="22"/>
+				<property name="jumpServer0.host" value=""/>
+				<property name="jumpServer0.enabled" value="false"/>
+				<property name="localHost" value=""/>
+				<property name="host" value=""/>
+				<property name="jumpServer0.name" value=""/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="true">
+				<property name="socks-host" value=""/>
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="true">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.client.cert" value=""/>
+				<property name="ssl.client.key" value=""/>
+				<property name="ssl.ca.cert" value=""/>
+				<property name="ssl.method" value="CERTIFICATES"/>
+				<property name="ssl.cipher.suites" value=""/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>
