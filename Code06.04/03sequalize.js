@@ -82,4 +82,9 @@ module.exports = {
 
 6) OBJETO DB => Al final del archivo database/models/index.js, se encuentra disponible la exportacion del objeto DB, que podremos llamar desde donde sea requerido, cada vez que debamos consultar la BD. 
 
+
+
+
+PARA INSTALAR Y USAR SEQUELIZE AUTO => VER https://github.com/sequelize/sequelize-auto
+
 */
