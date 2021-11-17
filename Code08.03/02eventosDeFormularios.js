@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
 
     form.addEventListener("submit", function (e) { // 
 
-        e.preventDefault(); // Cancela el comport. por default definido por el HTML para que no se envie. Por lo gral se usa con un if else
+        e.preventDefault(); // Cancela el comportortamiento por default definido por el HTML para que no se envie. Por lo gral se usa con un if else
         console.log(1)
     })
 })
