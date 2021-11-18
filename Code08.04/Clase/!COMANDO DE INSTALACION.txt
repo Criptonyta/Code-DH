@@ -1,0 +1,12 @@
+
+desde el terminal de gitbash | INSTALA TODA LA ESTRUCTURA DE UN PROYECTO
+
+1) npm install -g fran-generator
+
+2) npm install
+
+3) ejecutar => fran
+
+4) npm start
+
+5) npm run dev (para ejecutar nodemon)

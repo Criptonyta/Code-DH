@@ -9,11 +9,11 @@
 
 // METODOS:
 
-localStorage.setItem('nombre', 'Dario') // Permite adicionar items al objeto, siendo el primer parametro la clave y el segundo su valor
+localStorage.setItem('clave', 'valor') // Permite adicionar items al objeto, siendo el primer parametro la clave y el segundo su valor
 
-localStorage.getItem('nombre') // Devuelve el valor de la clave que le pasemos como parametro
+localStorage.getItem('clave') // Devuelve el valor de la clave que le pasemos como parametro
 
-localStorage.removeItem('nombre') // Busca la clave del objeto y la elimina
+localStorage.removeItem('clave') // Busca la clave del objeto y la elimina
 
 localStorage.clear('') // Borra todo el contenido almacenado en storage
 
