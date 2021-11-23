@@ -84,7 +84,64 @@ module.exports = {
 
 
 
+------ Segun el VIDEO DE LA CLASE PARA INSTALAR SEQUELIZE AUTO ------
 
-PARA INSTALAR Y USAR SEQUELIZE AUTO => VER https://github.com/sequelize/sequelize-auto
+
+PARA INSTALAR Y USAR SEQUELIZE AUTO => VER https://github.com/sequelize/sequelize-auto y el video de la clase en vivo "consumo de apis propias (apartir de la hora 1:43)"
+PASOS:
+
+1) CREAR EL ARCHIVO DE CONFIGURACION  => .sequelizerc en la raiz del proyecto, incluyendo en el el texto tipo de la configuracion:
+
+const path = require('path')
+
+module.exports = {
+    'config': path.resolve('./database', 'config', 'database.json'),
+    'migrations-path': path.resolve('./database', 'migrations'),
+    'models-path': path.resolve('./database', 'models'),
+    'seeders-path': path.resolve('./database', 'seeders'),
+}
+
+2) INSTALAR =>
+sequelize-cli -g init
+npm install sequelize mysql2 -g
+npm install sequelize auto -g
+Luego de correr estoss 3 comandos en la consola, verificar en package.json que fueron instalados
+
+3) AJUSTAR LA CONFIGURACION => En database/config/config.js, cambiar el puerto, el nombre de la BD, la password
+
+4) IMPORTAR LOS MODELOS => Copiar esta linea en la consola y editar lo que corresponda (ni los <> ni los [] deben quedar). El dialecto es mysql
+sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port]  --dialect [dialect]
+
+5) MOVER LOS MODELOS CREADOS => Desde la ccarpeta creada por auto, mover los modelos creados a la carpeta nuestra. Si no quedaran archivos dentro, podemos borrar la inicial.
+
+6) REQUERIR EL MODELO => En el Index de mis modelos, requerir ./init-models
+const initmodels = require('./init-models')
+
+7) CONFIGURAR EL INDEX => En el index de models, incluir las siguientes lineas debajo de los require:
+db = initmodels(sequelize)
+let db = {}
+
+
+
+PARA CREAR LA BD, TABLAS Y RELACIONES CON WORKBENCH (video de consumo de apis propias en la hora 1:16)
+
+1) VERIFICAR => Verificar si todos los metodos del modelo y las funciones estan todas async. Verificar si los controladores estan todos configurados con try y catch (para gestionar los errores). Verificar si todas las rutas estan configuradas con los 4 metodos (GET, GET:/id, POST, PUT:/id, DELETE:/id)
+
+2) CREAR CONEXION => Abrir workbench y crear una nueva conexion y una nueva BD usando model (icono debajo del delfin), add diagram, cambiar nombre con schema editor
+
+3) CREAR LAS TABLAS Y CAMPOS => Marcar las PKs (no FKs) y relacionarlas (sin tablas pivot)
+
+4) CUSTOMIZAR LAS FKs => De las FKs creadas automaticamente, customizarlas para sacarles los snake_case, usando los camelCase
+
+5) POBLAR LA BD CON DATOS => Pueden crearse los datos manualmente o bien intentar importarlos via json u otros medios
+
+6) EXPORTAR => Para exportar el modelo y la estructura de datos, uso fordward engenie
+
+
+
+
+
+
+
 
 */
