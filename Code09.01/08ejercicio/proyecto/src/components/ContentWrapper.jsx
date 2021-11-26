@@ -8,7 +8,7 @@ function ContentWrapper() {
   return (
     <div>
       {/* <!-- Content Wrapper --> */}
-      <div id="content-wrapper" class="d-flex flex-column"></div>
+      <div id="content-wrapper" className="d-flex flex-column"></div>
       {/* <!-- End of Content Wrapper --> */}
       <div>
         <TopBar />
