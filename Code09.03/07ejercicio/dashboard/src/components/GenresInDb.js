@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Genre  from './Genre';
 
 let genres = [
@@ -13,6 +13,17 @@ let genres = [
     {genre: 'Infantiles'},
     {genre: 'Musical'}
 ]
+
+class GenresInDb extends Component{...}
+constructor(){
+    super()
+    this.state ={
+    genresList : []
+    }
+    }
+    
+
+
 
 function GenresInDb(){
     return (
