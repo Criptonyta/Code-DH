@@ -62,7 +62,7 @@ class VerPais extends Component {
             placeholder="Indicá el pais a buscar"
           ></input>
           <button
-            className="button"
+            className="boton"
             id="busquedaPais"
             onClick={() => this.buscarNuevoPais()}
           >
