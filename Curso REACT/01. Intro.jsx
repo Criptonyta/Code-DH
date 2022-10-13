@@ -1,7 +1,7 @@
 /*
 
 URL DEL CURSO => https://jonmircha.com/react
-
+OTRO CURSO DE REACT (PAGO UDEMY) => https://www.udemy.com/course/react-cero-experto/
 
 INTRODUCCION
 
